@@ -1,0 +1,3122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Selamat ulang tahun, Sayang!</title>
+  <meta name="description"
+    content="Halaman ulang tahun spesial yang dibuat dengan penuh cinta. Tiup lilin, buka surat, dan temukan kejutan!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Caveat:wght@600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFF0F5;
+      --dots: #FFD6E8;
+      --surface: #FFFCFD;
+      --ink: #3D1F33;
+      --line: #3D1F33;
+      --shadow: #3D1F33;
+      --pink: #FF7BA5;
+      --pink-soft: #FFC2D6;
+      --butter: #FFD86B;
+      --mint: #9BE3C8;
+      --sky: #A9D8FF;
+      --lilac: #D9C2FF;
+      --peach: #FFBFA3;
+      --coral: #FF8A80;
+      --lemon: #FFF59D;
+      --on-fill: #3D1F33;
+      --muted: #7A4E68;
+      --font-d: 'Baloo 2', 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-h: 'Caveat', 'Segoe Print', 'Comic Sans MS', cursive;
+      --glow: 0 0 40px rgba(255, 123, 165, .25), 0 0 80px rgba(255, 216, 107, .15);
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #1A0A24;
+        --dots: #2A1238;
+        --surface: #321845;
+        --ink: #FFE9F1;
+        --line: #FFC2D6;
+        --shadow: #FF7BA5;
+        --muted: #D9B3C9;
+        --glow: 0 0 40px rgba(255, 123, 165, .3), 0 0 80px rgba(217, 194, 255, .2);
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #1A0A24;
+      --dots: #2A1238;
+      --surface: #321845;
+      --ink: #FFE9F1;
+      --line: #FFC2D6;
+      --shadow: #FF7BA5;
+      --muted: #D9B3C9;
+      --glow: 0 0 40px rgba(255, 123, 165, .3), 0 0 80px rgba(217, 194, 255, .2);
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+      scroll-behavior: smooth
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    [hidden] {
+      display: none !important
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--ink);
+      background-color: var(--bg);
+      background-image: radial-gradient(var(--dots) 2.2px, transparent 2.7px), radial-gradient(circle at 15% 20%, rgba(255, 123, 165, .08) 0%, transparent 50%), radial-gradient(circle at 85% 80%, rgba(169, 216, 255, .08) 0%, transparent 50%);
+      background-size: 28px 28px, 100% 100%, 100% 100%;
+      font-family: var(--font-d);
+      font-weight: 500;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 1.5rem 1.1rem 5rem
+    }
+
+    section {
+      margin-top: 4.5rem;
+      animation: fadeSlideUp .8s ease both
+    }
+
+    section:nth-child(2) {
+      animation-delay: .1s
+    }
+
+    section:nth-child(3) {
+      animation-delay: .2s
+    }
+
+    section:nth-child(4) {
+      animation-delay: .3s
+    }
+
+    section:nth-child(5) {
+      animation-delay: .4s
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      line-height: 1.05
+    }
+
+    h2 {
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: clamp(2.1rem, 7vw, 2.8rem);
+      text-decoration: underline wavy var(--pink) 3px;
+      text-underline-offset: 9px;
+      text-decoration-skip-ink: none;
+      animation: wiggleText 3s ease-in-out infinite;
+    }
+
+    @keyframes wiggleText {
+
+      0%,
+      100% {
+        transform: rotate(0)
+      }
+
+      25% {
+        transform: rotate(-.8deg)
+      }
+
+      75% {
+        transform: rotate(.8deg)
+      }
+    }
+
+    .lead {
+      margin: .9rem 0 1.4rem;
+      color: var(--muted);
+      max-width: 52ch
+    }
+
+    .emoji-accent {
+      display: inline-block;
+      animation: bounce 2s ease-in-out infinite;
+      font-style: normal
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-6px) scale(1.15)
+      }
+    }
+
+    .sticker {
+      background: var(--surface);
+      border: 3px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 5px 5px 0 var(--shadow);
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .sticker:hover {
+      transform: translateY(-2px);
+      box-shadow: 6px 8px 0 var(--shadow)
+    }
+
+    .btn {
+      font: inherit;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: .65em 1.35em;
+      cursor: pointer;
+      color: var(--on-fill);
+      background: var(--butter);
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 4px 4px 0 var(--shadow);
+      transition: transform .12s, box-shadow .12s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, .3) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform .5s
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%)
+    }
+
+    .btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 6px 6px 0 var(--shadow)
+    }
+
+    .btn:active {
+      transform: translate(3px, 3px);
+      box-shadow: 1px 1px 0 var(--shadow)
+    }
+
+    .btn:disabled {
+      cursor: default;
+      opacity: .75;
+      transform: none;
+      box-shadow: 2px 2px 0 var(--shadow)
+    }
+
+    .btn.pink {
+      background: var(--pink)
+    }
+
+    .btn.mint {
+      background: var(--mint)
+    }
+
+    .btn.plain {
+      background: var(--surface);
+      color: var(--ink)
+    }
+
+    .btn.coral {
+      background: var(--coral)
+    }
+
+    :focus-visible {
+      outline: 3px dashed var(--pink);
+      outline-offset: 4px
+    }
+
+    .floaters {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden
+    }
+
+    .floaters span {
+      position: absolute;
+      bottom: -3rem;
+      opacity: .45;
+      animation: rise linear infinite
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(-8deg) scale(1)
+      }
+
+      50% {
+        transform: translateY(-57vh) rotate(12deg) scale(1.2)
+      }
+
+      100% {
+        transform: translateY(-115vh) rotate(-5deg) scale(.9)
+      }
+    }
+
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 100;
+      font-size: 14px;
+      animation: sparkleFade .8s ease-out forwards
+    }
+
+    @keyframes sparkleFade {
+      0% {
+        opacity: 1;
+        transform: scale(1) translateY(0)
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0) translateY(-30px)
+      }
+    }
+
+    /* hero */
+    .hero {
+      text-align: center;
+      margin-top: 1.2rem;
+      animation: fadeSlideUp .8s ease both
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 5.5vw, 2.1rem)
+    }
+
+    .name-sticker {
+      display: inline-block;
+      max-width: 100%;
+      margin-top: .6rem;
+      padding: .02em .4em .1em;
+      font-size: clamp(2.6rem, 13vw, 5.2rem);
+      line-height: 1.05;
+      word-break: break-word;
+      background: linear-gradient(135deg, var(--pink), var(--lilac));
+      color: var(--on-fill);
+      border: 3px solid var(--line);
+      border-radius: 26px;
+      box-shadow: 6px 6px 0 var(--shadow), var(--glow);
+      transform: rotate(-2deg);
+      animation: nameWiggle 4s ease-in-out infinite;
+    }
+
+    @keyframes nameWiggle {
+
+      0%,
+      100% {
+        transform: rotate(-2deg) scale(1)
+      }
+
+      50% {
+        transform: rotate(1deg) scale(1.02)
+      }
+    }
+
+    .stage {
+      position: relative;
+      width: min(88%, 340px);
+      margin: 1.6rem auto 0
+    }
+
+    .stage svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      overflow: visible;
+      transition: transform .3s
+    }
+
+    .stage svg:hover {
+      transform: scale(1.02)
+    }
+
+    .balloon {
+      position: absolute;
+      font-size: 2.6rem;
+      animation: sway 5s ease-in-out infinite alternate;
+      user-select: none
+    }
+
+    .balloon.l {
+      left: -14%;
+      top: 2%
+    }
+
+    .balloon.r {
+      right: -12%;
+      top: 14%;
+      animation-delay: -2s;
+      font-size: 2.2rem
+    }
+
+    .balloon.extra-l {
+      left: -8%;
+      top: 28%;
+      font-size: 1.8rem;
+      animation-delay: -3s
+    }
+
+    .balloon.extra-r {
+      right: -6%;
+      top: 38%;
+      font-size: 1.6rem;
+      animation-delay: -1s
+    }
+
+    @keyframes sway {
+      from {
+        transform: rotate(-8deg) translateY(0)
+      }
+
+      to {
+        transform: rotate(8deg) translateY(-10px)
+      }
+    }
+
+    .age-badge {
+      position: absolute;
+      right: -6%;
+      bottom: 14%;
+      width: 5.2rem;
+      height: 5.2rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      line-height: 1;
+      transform: rotate(12deg);
+      background: linear-gradient(135deg, var(--mint), var(--sky));
+      color: var(--on-fill);
+      border: 3px solid var(--line);
+      box-shadow: 4px 4px 0 var(--shadow);
+      font-weight: 800;
+      font-size: 1.7rem;
+      animation: badgePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+
+      0%,
+      100% {
+        transform: rotate(12deg) scale(1)
+      }
+
+      50% {
+        transform: rotate(12deg) scale(1.08)
+      }
+    }
+
+    .age-badge small {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700
+    }
+
+    .blow-status {
+      min-height: 3.2em;
+      margin: 1.2rem auto .8rem;
+      max-width: 32ch;
+      font-weight: 700
+    }
+
+    /* cake */
+    .flame {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+      animation: flick .8s ease-in-out infinite alternate
+    }
+
+    .cake .c2 .flame {
+      animation-delay: -.3s
+    }
+
+    .cake .c3 .flame {
+      animation-delay: -.55s
+    }
+
+    @keyframes flick {
+      from {
+        transform: scale(1, .9) rotate(-4deg)
+      }
+
+      to {
+        transform: scale(1, 1.1) rotate(4deg)
+      }
+    }
+
+    .cake.out .flame {
+      animation: none;
+      transform: scale(0);
+      opacity: 0;
+      transition: transform .25s, opacity .25s
+    }
+
+    .smoke {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center
+    }
+
+    .cake.out .smoke {
+      animation: puff 1.8s ease-out
+    }
+
+    .cake.out .c2 .smoke {
+      animation-delay: .12s
+    }
+
+    .cake.out .c3 .smoke {
+      animation-delay: .24s
+    }
+
+    @keyframes puff {
+      0% {
+        opacity: .7;
+        transform: translateY(0) scale(.6)
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-38px) scale(1.7)
+      }
+    }
+
+    .eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: blink 4.5s infinite
+    }
+
+    @keyframes blink {
+
+      0%,
+      94%,
+      100% {
+        transform: scaleY(1)
+      }
+
+      97% {
+        transform: scaleY(.1)
+      }
+    }
+
+    .eyes-happy {
+      display: none
+    }
+
+    .cake.out .eyes-happy {
+      display: inline
+    }
+
+    .cake.out .eyes-open {
+      display: none
+    }
+
+    /* letter */
+    .env-btn {
+      display: block;
+      width: min(100%, 360px);
+      margin: 1.4rem auto 0;
+      padding: 0;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      text-align: center
+    }
+
+    .env-btn svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+      transition: transform .15s
+    }
+
+    .env-btn:hover svg {
+      transform: translateY(-3px) rotate(-1deg)
+    }
+
+    .env-btn .flap-open {
+      display: none
+    }
+
+    .env-btn[aria-expanded="true"] .flap-open {
+      display: inline
+    }
+
+    .env-btn[aria-expanded="true"] .flap-closed,
+    .env-btn[aria-expanded="true"] .seal {
+      display: none
+    }
+
+    .env-cap {
+      display: block;
+      margin-top: .5rem;
+      font-weight: 700;
+      color: var(--muted)
+    }
+
+    .letter-wrap {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .5s ease
+    }
+
+    .letter-wrap.open {
+      grid-template-rows: 1fr
+    }
+
+    .letter-inner {
+      min-height: 0;
+      overflow: hidden
+    }
+
+    .letter {
+      margin: 1.6rem 0 0;
+      padding: 1.6rem 1.4rem 1.8rem;
+      transform: rotate(.6deg);
+      background-image: repeating-linear-gradient(transparent 0 2.05rem, color-mix(in srgb, var(--pink) 35%, transparent) 2.05rem calc(2.05rem + 2px));
+      background-color: var(--surface);
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: clamp(1.45rem, 4.8vw, 1.75rem);
+      line-height: 2.05rem;
+      white-space: pre-wrap;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .surat-header,
+    .kejutan-header {
+      text-align: center;
+      margin-bottom: .6rem
+    }
+
+    .surat-toolbar {
+      display: flex;
+      gap: .8rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: .6rem 0 1rem
+    }
+
+    .kejutan-toolbar {
+      display: flex;
+      gap: .8rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: .6rem 0 .9rem
+    }
+
+    .letter-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.2rem;
+      margin-bottom: .6rem
+    }
+
+    /* edit modals (surat & kejutan) */
+    .surat-edit-modal,
+    .kejutan-edit-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(26, 10, 36, .8);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      animation: fadeIn .25s ease;
+      overflow-y: auto;
+    }
+
+    .surat-edit-panel,
+    .kejutan-edit-panel {
+      width: min(100%, 540px);
+      background: var(--surface);
+      color: var(--ink);
+      border: 3.5px solid var(--line);
+      border-radius: 22px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 8px 8px 0 var(--shadow);
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .surat-modal-header,
+    .kejutan-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .6rem
+    }
+
+    .surat-edit-panel h3,
+    .kejutan-edit-panel h3 {
+      font-family: var(--font-h);
+      font-size: 2.1rem;
+      margin: 0;
+      color: var(--ink);
+      line-height: 1.1
+    }
+
+    .surat-modal-close,
+    .kejutan-modal-close {
+      background: var(--bg);
+      border: 2px solid var(--line);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--ink);
+      transition: transform .12s, background .12s;
+      flex-shrink: 0;
+    }
+
+    .surat-modal-close:hover,
+    .kejutan-modal-close:hover {
+      transform: scale(1.1) rotate(90deg);
+      background: var(--pink-soft)
+    }
+
+    .surat-hint-text,
+    .kejutan-hint-text {
+      font-size: .92rem;
+      color: var(--muted);
+      margin: 0 0 .8rem;
+      line-height: 1.45
+    }
+
+    .tag-pill {
+      display: inline-block;
+      background: var(--pink-soft);
+      border: 1.5px solid var(--line);
+      border-radius: 6px;
+      padding: .1em .4em;
+      font-size: .88em;
+      font-weight: 700;
+      color: #3D1F33
+    }
+
+    .surat-tag-helpers,
+    .kejutan-tag-helpers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-bottom: .9rem
+    }
+
+    .surat-insert-tag,
+    .kejutan-insert-tag {
+      font: inherit;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      border: 2px solid var(--line);
+      background: var(--butter);
+      color: var(--on-fill);
+      cursor: pointer;
+      box-shadow: 2px 2px 0 var(--shadow);
+      transition: transform .1s, box-shadow .1s;
+    }
+
+    .surat-insert-tag:hover,
+    .kejutan-insert-tag:hover {
+      transform: translateY(-1px);
+      box-shadow: 3px 3px 0 var(--shadow)
+    }
+
+    .surat-insert-tag:active,
+    .kejutan-insert-tag:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 var(--shadow)
+    }
+
+    .surat-insert-tag.template-tag,
+    .kejutan-insert-tag.template-tag {
+      background: var(--mint)
+    }
+
+    .surat-edit-label,
+    .kejutan-edit-label {
+      display: block;
+      font-weight: 700;
+      font-size: .92rem;
+      color: var(--muted);
+      margin-bottom: .3rem
+    }
+
+    .surat-edit-panel textarea,
+    .kejutan-edit-panel textarea {
+      width: 100%;
+      padding: .8rem 1rem;
+      font-family: var(--font-h);
+      font-size: 1.35rem;
+      border: 2.5px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--ink);
+      outline: none;
+      resize: vertical;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .surat-edit-panel textarea {
+      font-weight: 600;
+      line-height: 1.8rem;
+      min-height: 220px;
+      text-align: justify;
+      text-justify: inter-word;
+      background-image: repeating-linear-gradient(transparent 0 1.8rem, color-mix(in srgb, var(--pink) 25%, transparent) 1.8rem calc(1.8rem + 1.5px))
+    }
+
+    .kejutan-edit-panel textarea {
+      font-weight: 700;
+      line-height: 1.5;
+      min-height: 140px;
+      background-image: repeating-linear-gradient(transparent 0 1.8rem, color-mix(in srgb, var(--butter) 35%, transparent) 1.8rem calc(1.8rem + 1.5px))
+    }
+
+    .surat-edit-panel textarea:focus,
+    .kejutan-edit-panel textarea:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3.5px rgba(255, 123, 165, .35)
+    }
+
+    .surat-char-counter,
+    .kejutan-char-counter {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: .82rem;
+      color: var(--muted);
+      margin: .4rem 0
+    }
+
+    .surat-edit-actions,
+    .kejutan-edit-actions {
+      display: flex;
+      gap: .7rem;
+      margin-top: 1.2rem;
+      justify-content: flex-end;
+      flex-wrap: wrap
+    }
+
+    .surat-edit-actions .btn,
+    .kejutan-edit-actions .btn {
+      font-size: .95rem;
+      padding: .55em 1.15em
+    }
+
+    /* scratch card */
+    .scratch {
+      position: relative;
+      overflow: hidden;
+      margin-top: 1.4rem
+    }
+
+    .prize {
+      position: relative;
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      padding: 1.4rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--butter), var(--peach));
+      color: var(--on-fill);
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: clamp(1.55rem, 5.6vw, 2.1rem);
+      line-height: 1.2;
+    }
+
+    #scratchCv {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+      cursor: crosshair;
+      transition: opacity .6s
+    }
+
+    #scratchCv.done {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .scratch-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-top: 1.3rem
+    }
+
+    .scratch-actions .btn {
+      font-size: .95rem;
+      padding: .5em 1.2em
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 700;
+      padding: 1.5rem
+    }
+
+    footer .footer-emoji {
+      display: inline-block;
+      animation: heartbeat 1.5s ease-in-out infinite
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      14% {
+        transform: scale(1.2)
+      }
+
+      28% {
+        transform: scale(1)
+      }
+
+      42% {
+        transform: scale(1.15)
+      }
+    }
+
+    .kawaii-divider {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      opacity: .6;
+      animation: wiggleText 4s ease-in-out infinite;
+      user-select: none
+    }
+
+    /* editor overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1rem;
+      overflow-y: auto;
+      background: rgba(30, 10, 30, .6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .panel {
+      width: min(100%, 560px);
+      margin: auto;
+      padding: 1.4rem 1.2rem 1.3rem
+    }
+
+    .panel h2 {
+      font-size: 2.2rem
+    }
+
+    .panel .lead {
+      margin: .7rem 0 1rem;
+      font-size: .95rem
+    }
+
+    .panel label {
+      display: block;
+      margin-top: .9rem;
+      font-weight: 800;
+      font-size: .95rem
+    }
+
+    .panel .hint {
+      font-weight: 500;
+      color: var(--muted)
+    }
+
+    .panel input,
+    .panel textarea {
+      display: block;
+      width: 100%;
+      margin-top: .3rem;
+      padding: .55em .8em;
+      font: inherit;
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--bg);
+      border: 3px solid var(--line);
+      border-radius: 14px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .panel input:focus,
+    .panel textarea:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255, 123, 165, .2)
+    }
+
+    .panel textarea {
+      resize: vertical;
+      line-height: 1.4
+    }
+
+    #fSurat {
+      text-align: justify;
+      text-justify: inter-word
+    }
+
+    .panel-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1.3rem
+    }
+
+    .panel-actions .btn {
+      font-size: .95rem;
+      padding: .55em 1.1em
+    }
+
+    .share {
+      margin-top: 1rem;
+      font-size: .9rem
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 1100;
+      left: 50%;
+      bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+      translate: -50% 20px;
+      opacity: 0;
+      pointer-events: none;
+      max-width: min(90vw, 420px);
+      padding: .6em 1.1em;
+      text-align: center;
+      font-weight: 800;
+      background: var(--mint);
+      color: var(--on-fill);
+      border: 3px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--shadow);
+      transition: opacity .2s, translate .2s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      translate: -50% 0
+    }
+
+    #confetti {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 50;
+      pointer-events: none
+    }
+
+    /* music button */
+    .music-btn {
+      position: fixed;
+      z-index: 20;
+      left: max(1rem, env(safe-area-inset-left, 0px));
+      bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+      width: 3.2rem;
+      height: 3.2rem;
+      padding: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--pink), var(--lilac));
+      color: var(--on-fill);
+      border: 3px solid var(--line);
+      box-shadow: 4px 4px 0 var(--shadow);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      animation: musicPulse 2s ease-in-out infinite;
+    }
+
+    .music-btn .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1
+    }
+
+    .music-btn .bars {
+      display: none;
+      gap: 2px;
+      align-items: flex-end;
+      height: 16px
+    }
+
+    .music-btn.playing .bars {
+      display: flex
+    }
+
+    .music-btn .bar {
+      width: 3px;
+      background: var(--on-fill);
+      border-radius: 2px;
+      animation: barBounce 1s ease-in-out infinite
+    }
+
+    .music-btn .bar:nth-child(1) {
+      height: 8px
+    }
+
+    .music-btn .bar:nth-child(2) {
+      height: 14px;
+      animation-delay: .15s
+    }
+
+    .music-btn .bar:nth-child(3) {
+      height: 10px;
+      animation-delay: .3s
+    }
+
+    .music-btn .bar:nth-child(4) {
+      height: 16px;
+      animation-delay: .45s
+    }
+
+    .music-btn.playing .play-icon {
+      display: none
+    }
+
+    .music-btn:not(.playing) .play-icon {
+      display: block
+    }
+
+    @keyframes barBounce {
+
+      0%,
+      100% {
+        transform: scaleY(1)
+      }
+
+      50% {
+        transform: scaleY(.4)
+      }
+    }
+
+    @keyframes musicPulse {
+
+      0%,
+      100% {
+        box-shadow: 4px 4px 0 var(--shadow), 0 0 0 0 rgba(255, 123, 165, .4)
+      }
+
+      50% {
+        box-shadow: 4px 4px 0 var(--shadow), 0 0 0 8px rgba(255, 123, 165, 0)
+      }
+    }
+
+    .music-label {
+      position: fixed;
+      z-index: 19;
+      left: calc(max(1rem, env(safe-area-inset-left, 0px)) + 3.6rem);
+      bottom: calc(1.6rem + env(safe-area-inset-bottom, 0px));
+      padding: .3em .7em;
+      font-size: .8rem;
+      font-weight: 800;
+      background: var(--surface);
+      color: var(--muted);
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 3px 3px 0 var(--shadow);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity .3s, transform .3s;
+      pointer-events: none;
+    }
+
+    .music-label.show {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    /* ===== POLAROID GALLERY ===== */
+    .polaroid-section {
+      position: relative
+    }
+
+    .polaroid-header {
+      text-align: center;
+      margin-bottom: 1.8rem
+    }
+
+    .polaroid-header h2 {
+      display: inline-block
+    }
+
+    .polaroid-toolbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-top: 1.2rem
+    }
+
+    .polaroid-toolbar .btn {
+      font-size: .95rem;
+      padding: .45em 1.2em
+    }
+
+    .polaroid-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3.2rem 2rem;
+      padding: 1.5rem .5rem 2rem;
+      perspective: 1200px
+    }
+
+    @media (max-width: 640px) {
+      .polaroid-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 3.2rem 1rem
+      }
+    }
+
+    @media (min-width: 641px) {
+      .polaroid-grid>.polaroid-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 330px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    .polaroid-card {
+      position: relative;
+      height: 460px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), z-index 0s
+    }
+
+    .polaroid-card:nth-child(6n+1) {
+      transform: rotate(-3.5deg)
+    }
+
+    .polaroid-card:nth-child(6n+2) {
+      transform: rotate(2.8deg)
+    }
+
+    .polaroid-card:nth-child(6n+3) {
+      transform: rotate(-2deg)
+    }
+
+    .polaroid-card:nth-child(6n+4) {
+      transform: rotate(3.2deg)
+    }
+
+    .polaroid-card:nth-child(6n+5) {
+      transform: rotate(-2.5deg)
+    }
+
+    .polaroid-card:nth-child(6n+6) {
+      transform: rotate(2deg)
+    }
+
+    .polaroid-card:hover {
+      transform: rotate(0deg) translateY(-10px) scale(1.025);
+      z-index: 15
+    }
+
+    .polaroid-card.flipped {
+      z-index: 12
+    }
+
+    .polaroid-card.flipped .polaroid-inner {
+      transform: rotateY(180deg)
+    }
+
+    .polaroid-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform .65s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .washi-tape {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      width: 100px;
+      height: 28px;
+      z-index: 20;
+      opacity: .92;
+      box-shadow: 0 2px 6px rgba(61, 31, 51, .15);
+      clip-path: polygon(0% 0%, 5% 4%, 10% 0%, 15% 4%, 20% 0%, 25% 4%, 30% 0%, 35% 4%, 40% 0%, 45% 4%, 50% 0%, 55% 4%, 60% 0%, 65% 4%, 70% 0%, 75% 4%, 80% 0%, 85% 4%, 90% 0%, 95% 4%, 100% 0%, 100% 100%, 95% 96%, 90% 100%, 85% 96%, 80% 100%, 75% 96%, 70% 100%, 65% 96%, 60% 100%, 55% 96%, 50% 100%, 45% 96%, 40% 100%, 35% 96%, 30% 100%, 25% 96%, 20% 100%, 15% 96%, 10% 100%, 5% 96%, 0% 100%);
+      border-top: 1px dashed rgba(255, 255, 255, .65);
+      border-bottom: 1px dashed rgba(255, 255, 255, .65);
+      pointer-events: none;
+    }
+
+    .washi-pink {
+      background: #FF9DBD
+    }
+
+    .washi-mint {
+      background: #9BE3C8
+    }
+
+    .washi-butter {
+      background: #FFD86B
+    }
+
+    .washi-sky {
+      background: #A9D8FF
+    }
+
+    .washi-lilac {
+      background: #D9C2FF
+    }
+
+    .washi-coral {
+      background: #FF8A80
+    }
+
+    .tape-pin {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 1.35rem;
+      filter: drop-shadow(2px 2px 0 rgba(61, 31, 51, .25));
+      animation: pinWiggle 3.5s ease-in-out infinite;
+      line-height: 1
+    }
+
+    @keyframes pinWiggle {
+
+      0%,
+      100% {
+        transform: rotate(0)
+      }
+
+      50% {
+        transform: rotate(15deg)
+      }
+    }
+
+    .polaroid-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: #FFFFFF;
+      color: #3D1F33;
+      border: 3.5px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 6px 6px 0 var(--shadow);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    :root[data-theme="dark"] .polaroid-face {
+      background: #FFFDFE;
+      color: #3D1F33;
+      box-shadow: 6px 6px 0 rgba(255, 123, 165, .55)
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .polaroid-face {
+        background: #FFFDFE;
+        color: #3D1F33;
+        box-shadow: 6px 6px 0 rgba(255, 123, 165, .55)
+      }
+    }
+
+    .polaroid-front {
+      padding: 14px 14px 18px
+    }
+
+    .polaroid-img-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--line);
+      background: #FFF3F7;
+      flex-shrink: 0
+    }
+
+    .polaroid-img-box svg,
+    .polaroid-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .polaroid-img-gloss {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, .05) 45%, transparent 60%);
+      pointer-events: none
+    }
+
+    .polaroid-card-actions {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      gap: 6px;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity .2s, transform .2s;
+      z-index: 5
+    }
+
+    .polaroid-card:hover .polaroid-card-actions,
+    .polaroid-card:focus-within .polaroid-card-actions {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    @media (hover: none) {
+      .polaroid-card-actions {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .polaroid-action-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .95);
+      border: 2px solid var(--line);
+      color: var(--line);
+      box-shadow: 2px 2px 0 var(--shadow);
+      display: grid;
+      place-items: center;
+      font-size: .92rem;
+      cursor: pointer;
+      padding: 0;
+      transition: transform .15s, background .15s;
+    }
+
+    .polaroid-action-btn:hover {
+      transform: scale(1.15);
+      background: var(--pink-soft)
+    }
+
+    .polaroid-caption-box {
+      margin-top: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      min-height: 0
+    }
+
+    .polaroid-title {
+      font-family: var(--font-h);
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #3D1F33;
+      margin: 0
+    }
+
+    .polaroid-desc {
+      font-size: .88rem;
+      line-height: 1.35;
+      color: #7A4E68;
+      margin: 4px 0 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .polaroid-footer-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(61, 31, 51, .2)
+    }
+
+    .polaroid-date {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      color: #FF5C8A;
+      font-weight: 700
+    }
+
+    .polaroid-flip-hint {
+      font-size: .78rem;
+      font-weight: 700;
+      color: #7A4E68;
+      display: flex;
+      align-items: center;
+      gap: 3px
+    }
+
+    .polaroid-back {
+      transform: rotateY(180deg);
+      padding: 18px 18px 16px;
+      background: repeating-linear-gradient(transparent 0 1.65rem, rgba(61, 31, 51, .08) 1.65rem calc(1.65rem + 1px)), #FFFDF8;
+      justify-content: space-between;
+    }
+
+    .polaroid-back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px dashed rgba(61, 31, 51, .25);
+      padding-bottom: 10px
+    }
+
+    .polaroid-back-title {
+      font-family: var(--font-h);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #FF5C8A;
+      margin: 0
+    }
+
+    .polaroid-stamp {
+      border: 2px dashed #FF5C8A;
+      border-radius: 6px;
+      padding: 3px 6px;
+      font-size: .72rem;
+      font-weight: 800;
+      color: #FF5C8A;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      transform: rotate(5deg);
+      background: rgba(255, 92, 138, .08);
+      white-space: nowrap
+    }
+
+    .polaroid-secret-msg {
+      flex: 1;
+      padding: 14px 4px;
+      font-family: var(--font-h);
+      font-size: 1.35rem;
+      line-height: 1.65rem;
+      color: #3D1F33;
+      font-weight: 600;
+      white-space: pre-wrap;
+      overflow-y: auto
+    }
+
+    .polaroid-back-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(61, 31, 51, .2)
+    }
+
+    .polaroid-back-date {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      color: #FF7BA5;
+      font-weight: 700
+    }
+
+    .polaroid-turn-back-btn {
+      font: inherit;
+      font-size: .8rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: rgba(255, 123, 165, .15);
+      color: #3D1F33;
+      transition: background .15s
+    }
+
+    .polaroid-turn-back-btn:hover {
+      background: rgba(255, 123, 165, .3)
+    }
+
+    .polaroid-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(26, 10, 36, .85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      animation: fadeIn .25s ease
+    }
+
+    .polaroid-lightbox-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90vw
+    }
+
+    .polaroid-lightbox-card {
+      width: min(90vw, 360px);
+      height: 480px;
+      perspective: 1200px;
+      position: relative
+    }
+
+    .polaroid-modal-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFF;
+      border: 3px solid var(--line);
+      box-shadow: 3px 3px 0 var(--shadow);
+      color: var(--line);
+      font-size: 1.3rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: transform .15s, background .15s;
+      z-index: 1010
+    }
+
+    .polaroid-modal-close:hover {
+      transform: scale(1.1) rotate(90deg);
+      background: var(--pink-soft)
+    }
+
+    .polaroid-lightbox-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .8rem;
+      margin-top: 1.4rem;
+      flex-wrap: wrap
+    }
+
+    .polaroid-edit-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(26, 10, 36, .8);
+      backdrop-filter: blur(6px);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      animation: fadeIn .25s ease
+    }
+
+    .polaroid-edit-panel {
+      width: min(100%, 480px);
+      background: var(--surface);
+      color: var(--ink);
+      border: 3.5px solid var(--line);
+      border-radius: 20px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 8px 8px 0 var(--shadow);
+      max-height: 90vh;
+      overflow-y: auto
+    }
+
+    .polaroid-edit-panel h3 {
+      font-family: var(--font-h);
+      font-size: 2rem;
+      margin: 0 0 1rem;
+      color: var(--ink)
+    }
+
+    .polaroid-edit-panel label {
+      display: block;
+      margin-top: .9rem;
+      font-weight: 700;
+      font-size: .92rem;
+      color: var(--muted)
+    }
+
+    .polaroid-edit-panel input,
+    .polaroid-edit-panel textarea {
+      width: 100%;
+      margin-top: .3rem;
+      padding: .65rem .85rem;
+      font: inherit;
+      border: 2.5px solid var(--line);
+      border-radius: 12px;
+      background: #FFF;
+      color: #3D1F33;
+      outline: none
+    }
+
+    .polaroid-edit-panel input:focus,
+    .polaroid-edit-panel textarea:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255, 123, 165, .35)
+    }
+
+    .polaroid-edit-actions {
+      display: flex;
+      gap: .8rem;
+      margin-top: 1.4rem;
+      justify-content: flex-end
+    }
+
+    /* scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* MODE PENGUNJUNG: sembunyikan semua tombol edit */
+    body.viewer .polaroid-toolbar,
+    body.viewer .surat-toolbar,
+    body.viewer .letter-actions,
+    body.viewer .kejutan-toolbar,
+    body.viewer #scratchEditBtn,
+    body.viewer .p-change-btn,
+    body.viewer .p-edit-btn {
+      display: none !important
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important
+      }
+
+      .floaters {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floaters" aria-hidden="true" id="floaters"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main>
+    <header class="hero">
+      <h1>🎉 Selamat ulang tahun,<br><span class="name-sticker" id="nama">Sayang</span></h1>
+      <p class="blow-status" id="blowStatus" aria-live="polite">Buat permohonan dulu, trs tiup lilinnya yaa. 🙏✨</p>
+
+      <div class="stage">
+        <span class="balloon l" aria-hidden="true">🎈</span>
+        <span class="balloon r" aria-hidden="true">🎈</span>
+        <span class="balloon extra-l" aria-hidden="true">🎀</span>
+        <span class="balloon extra-r" aria-hidden="true">⭐</span>
+        <div class="age-badge" id="ageBadge" hidden>
+          <div><span id="ageNum">0</span><small>tahun</small></div>
+        </div>
+
+        <svg id="cake" class="cake" viewBox="0 0 320 300" role="img"
+          aria-label="Kue ulang tahun dengan tiga lilin. Ketuk untuk meniup lilinnya.">
+          <ellipse cx="160" cy="270" rx="140" ry="17" fill="var(--pink-soft)" stroke="var(--line)" stroke-width="3" />
+          <rect x="50" y="170" width="220" height="92" rx="20" fill="#FFB3CB" stroke="var(--line)" stroke-width="3" />
+          <g fill="#FFD86B" opacity=".95">
+            <rect x="72" y="238" width="10" height="4" rx="2" transform="rotate(20 77 240)" />
+            <rect x="238" y="240" width="10" height="4" rx="2" transform="rotate(-25 243 242)" />
+            <rect x="96" y="184" width="10" height="4" rx="2" transform="rotate(-30 101 186)" />
+            <rect x="222" y="186" width="10" height="4" rx="2" transform="rotate(35 227 188)" />
+          </g>
+          <g fill="#A9D8FF">
+            <rect x="150" y="248" width="10" height="4" rx="2" transform="rotate(-15 155 250)" />
+            <rect x="86" y="222" width="10" height="4" rx="2" transform="rotate(40 91 224)" />
+            <rect x="228" y="224" width="10" height="4" rx="2" transform="rotate(-40 233 226)" />
+          </g>
+          <g class="eyes-open" fill="#3D1F33">
+            <circle class="eye" cx="125" cy="214" r="5.5" />
+            <circle class="eye" cx="195" cy="214" r="5.5" />
+          </g>
+          <g class="eyes-happy" fill="none" stroke="#3D1F33" stroke-width="4" stroke-linecap="round">
+            <path d="M116 218 Q125 205 134 218" />
+            <path d="M186 218 Q195 205 204 218" />
+          </g>
+          <ellipse cx="106" cy="228" rx="11" ry="7" fill="#FF6F9C" opacity=".6" />
+          <ellipse cx="214" cy="228" rx="11" ry="7" fill="#FF6F9C" opacity=".6" />
+          <path d="M148 222 Q160 238 172 222" fill="none" stroke="#3D1F33" stroke-width="4" stroke-linecap="round" />
+          <rect x="85" y="108" width="150" height="68" rx="18" fill="#FFF3F7" stroke="var(--line)" stroke-width="3" />
+          <path
+            d="M85 126 Q85 108 103 108 H217 Q235 108 235 126 V134 Q235 148 224 148 Q213 148 213 134 Q213 124 203 124 Q193 124 193 138 Q193 154 180 154 Q167 154 167 140 Q167 128 156 128 Q145 128 145 140 Q145 150 134 150 Q123 150 123 136 Q123 126 112 126 Q101 126 101 136 Q101 148 91 148 Q85 148 85 140 Z"
+            fill="#FF8FB5" stroke="var(--line)" stroke-width="3" stroke-linejoin="round" />
+          <g class="c1">
+            <rect x="125" y="76" width="10" height="34" rx="3" fill="#FFD86B" stroke="var(--line)" stroke-width="3" />
+            <line x1="130" y1="76" x2="130" y2="69" stroke="#3D1F33" stroke-width="3" stroke-linecap="round" />
+            <g transform="translate(130 68)">
+              <path class="flame" d="M0 0 C-9 -10 -4 -22 0 -32 C4 -22 9 -10 0 0 Z" fill="#FFA62B" />
+              <path class="flame" d="M0 -1 C-4 -6 -2 -12 0 -17 C2 -12 4 -6 0 -1 Z" fill="#FFF3A0" />
+            </g>
+            <circle class="smoke" cx="130" cy="60" r="5" fill="var(--line)" />
+          </g>
+          <g class="c2">
+            <rect x="155" y="72" width="10" height="38" rx="3" fill="#9BE3C8" stroke="var(--line)" stroke-width="3" />
+            <line x1="160" y1="72" x2="160" y2="65" stroke="#3D1F33" stroke-width="3" stroke-linecap="round" />
+            <g transform="translate(160 64)">
+              <path class="flame" d="M0 0 C-9 -10 -4 -22 0 -32 C4 -22 9 -10 0 0 Z" fill="#FFA62B" />
+              <path class="flame" d="M0 -1 C-4 -6 -2 -12 0 -17 C2 -12 4 -6 0 -1 Z" fill="#FFF3A0" />
+            </g>
+            <circle class="smoke" cx="160" cy="56" r="5" fill="var(--line)" />
+          </g>
+          <g class="c3">
+            <rect x="185" y="76" width="10" height="34" rx="3" fill="#A9D8FF" stroke="var(--line)" stroke-width="3" />
+            <line x1="190" y1="76" x2="190" y2="69" stroke="#3D1F33" stroke-width="3" stroke-linecap="round" />
+            <g transform="translate(190 68)">
+              <path class="flame" d="M0 0 C-9 -10 -4 -22 0 -32 C4 -22 9 -10 0 0 Z" fill="#FFA62B" />
+              <path class="flame" d="M0 -1 C-4 -6 -2 -12 0 -17 C2 -12 4 -6 0 -1 Z" fill="#FFF3A0" />
+            </g>
+            <circle class="smoke" cx="190" cy="60" r="5" fill="var(--line)" />
+          </g>
+        </svg>
+      </div>
+    </header>
+
+    <div class="kawaii-divider" aria-hidden="true">📸 💖 🌟 💖 📸</div>
+
+    <!-- SEKSI FOTO POLAROID -->
+    <section id="polaroid" class="polaroid-section" aria-labelledby="hPolaroid">
+      <div class="polaroid-header">
+        <h2 id="hPolaroid">Kenangan Manis Kita 📸</h2>
+        <p class="lead">Setiap detik bersamamu selalu jadi cerita terindah. Ketuk fotonya untuk membalik &amp; baca
+          pesan rahasianya! <em class="emoji-accent">✨</em></p>
+        <div class="polaroid-toolbar">
+          <label class="btn mint" title="Ganti foto dengan foto pilihanmu">
+            📷 Ganti Foto Sendiri
+            <input type="file" id="polaroidBatchInput" accept="image/*" multiple hidden>
+          </label>
+          <button type="button" class="btn plain" id="polaroidResetBtn" title="Kembalikan ke foto bawaan">🔄 Reset Foto
+            Bawaan</button>
+          <button type="button" class="btn pink" id="exportBtn" title="Unduh file HTML final untuk diupload">💾 Unduh
+            Versi Final</button>
+        </div>
+      </div>
+      <div class="polaroid-grid" id="polaroidGrid"></div>
+    </section>
+
+    <div class="kawaii-divider" aria-hidden="true">🎀 💖 🌟 💖 🎀</div>
+
+    <section id="surat" aria-labelledby="hSurat">
+      <div class="surat-header">
+        <h2 id="hSurat">Ada surat buat kamu 💌</h2>
+        <div class="surat-toolbar">
+          <button type="button" class="btn pink" id="editSuratBtn" title="Ubah isi surat">✏️ Ubah Isi Surat</button>
+        </div>
+      </div>
+      <button class="env-btn" id="envBtn" type="button" aria-expanded="false" aria-controls="letterWrap">
+        <svg viewBox="0 -75 340 320" role="img" aria-label="Amplop surat">
+          <polygon class="flap-open" points="0,0 340,0 170,-68" fill="#FF9DBD" stroke="var(--line)" stroke-width="3"
+            stroke-linejoin="round" />
+          <rect x="0" y="0" width="340" height="240" rx="10" fill="var(--pink-soft)" stroke="var(--line)"
+            stroke-width="3" />
+          <path d="M0 240 L170 112 L340 240" fill="none" stroke="var(--line)" stroke-width="3"
+            stroke-linejoin="round" />
+          <polygon class="flap-closed" points="0,0 340,0 170,130" fill="#FF9DBD" stroke="var(--line)" stroke-width="3"
+            stroke-linejoin="round" />
+          <g class="seal">
+            <circle cx="170" cy="118" r="26" fill="#FF5C8A" stroke="var(--line)" stroke-width="3" />
+            <path
+              d="M170 132 C150 118 152 102 164 102 C168 102 170 105 170 108 C170 105 172 102 176 102 C188 102 190 118 170 132 Z"
+              fill="#FFF3F7" />
+          </g>
+        </svg>
+        <span class="env-cap" id="envCap">Ketuk amplopnya ✉️</span>
+      </button>
+      <div class="letter-wrap" id="letterWrap">
+        <div class="letter-inner">
+          <div class="letter sticker" id="letter"></div>
+          <div class="letter-actions">
+            <button type="button" class="btn pink" id="editSuratInnerBtn" title="Ubah isi surat ini">✏️ Ubah Isi
+              Surat</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="kawaii-divider" aria-hidden="true">🎂 🎁 🎉 🎁 🎂</div>
+
+    <section id="kejutan" aria-labelledby="hKejutan">
+      <div class="kejutan-header">
+        <h2 id="hKejutan">Kejutan terakhir 🎁</h2>
+        <p class="lead">Gosok kartunya pakai jari atau kursor. Jangan diintip dulu ya. <em class="emoji-accent">🤫</em>
+        </p>
+        <div class="kejutan-toolbar">
+          <button type="button" class="btn" id="editKejutanBtn" title="Ubah isi hadiah/kejutan terakhir">✏️ Ubah Isi
+            Kejutan</button>
+        </div>
+      </div>
+      <div class="scratch sticker" id="scratchBox">
+        <div class="prize" id="prize"></div>
+        <canvas id="scratchCv" role="img" aria-label="Kartu gosok. Gosok untuk membuka kejutan."></canvas>
+      </div>
+      <div class="scratch-actions">
+        <button class="btn plain" id="scratchSkip" type="button">Buka langsung 👀</button>
+        <button class="btn pink" id="scratchAgain" type="button" hidden>Gosok lagi ✨</button>
+        <button class="btn mint" id="scratchEditBtn" type="button" title="Ubah isi hadiah/kejutan">✏️ Ubah Hadiah
+          Ini</button>
+      </div>
+    </section>
+
+    <footer>
+      Dibuat dengan sayang oleh <span id="dari">Aku</span> <span class="footer-emoji">💖</span>
+    </footer>
+  </main>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="panel sticker" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+      <h2 id="pTitle">Sesuaikan untuk dia 🎨</h2>
+      <p class="lead">Isi, lalu ketuk Terapkan. Tautan yang kamu salin sudah membawa semua isiannya, jadi tinggal kirim
+        ke dia.</p>
+      <label>Nama dia<input id="fNama" maxlength="40" autocomplete="off"></label>
+      <label>Namamu<input id="fDari" maxlength="40" autocomplete="off"></label>
+      <label>Umur barunya <span class="hint">(boleh kosong)</span><input id="fUmur" inputmode="numeric" maxlength="3"
+          autocomplete="off"></label>
+      <label>Isi surat <span class="hint">{nama} dan {dari} otomatis diganti</span><textarea id="fSurat"
+          rows="9"></textarea></label>
+      <label>Alasan sayang <span class="hint">satu baris satu alasan</span><textarea id="fAlasan"
+          rows="6"></textarea></label>
+      <label>Isi kejutan terakhir <span class="hint">muncul setelah kartu digosok</span><textarea id="fKejutan"
+          rows="4"></textarea></label>
+      <div class="panel-actions">
+        <button class="btn pink" id="applyBtn" type="button">Terapkan ✅</button>
+        <button class="btn mint" id="shareBtn" type="button">Salin tautan untuk dia 🔗</button>
+        <button class="btn plain" id="resetBtn" type="button">Kembalikan awal 🔄</button>
+        <button class="btn plain" id="closeBtn" type="button">Tutup ✕</button>
+      </div>
+      <div class="share" id="shareBox" hidden>
+        <label>Tautan untuk dia <span class="hint">kalau tidak tersalin otomatis, salin dari sini</span>
+          <input id="shareUrl" readonly>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="polaroidSingleInput" accept="image/*" hidden>
+
+  <!-- Polaroid Lightbox -->
+  <div class="polaroid-modal-backdrop" id="polaroidLightbox" hidden>
+    <button type="button" class="polaroid-modal-close" id="polaroidLightboxClose" aria-label="Tutup preview">✕</button>
+    <div class="polaroid-lightbox-container">
+      <div class="polaroid-lightbox-card" id="polaroidLightboxCard"></div>
+      <div class="polaroid-lightbox-controls">
+        <button type="button" class="btn plain" id="polaroidPrevBtn">◀ Sebelumnya</button>
+        <button type="button" class="btn pink" id="polaroidFlipBtn">🔄 Balik Foto</button>
+        <button type="button" class="btn plain" id="polaroidNextBtn">Selanjutnya ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Polaroid Edit Modal -->
+  <div class="polaroid-edit-modal" id="polaroidEditModal" hidden>
+    <div class="polaroid-edit-panel">
+      <h3>Edit Foto Polaroid ✏️</h3>
+      <label>Judul Momen
+        <input type="text" id="pEditTitle" maxlength="60" placeholder="Misal: Kencan Pertama Kita 🍦">
+      </label>
+      <label>Tanggal / Catatan Singkat
+        <input type="text" id="pEditDate" maxlength="30" placeholder="Misal: 14 Februari">
+      </label>
+      <label>Deskripsi Foto
+        <textarea id="pEditDesc" rows="2" maxlength="140" placeholder="Cerita singkat foto ini..."></textarea>
+      </label>
+      <label>Pesan Rahasia (di Belakang Foto)
+        <textarea id="pEditNote" rows="4" maxlength="300" placeholder="Tulis ungkapan hatimu..."></textarea>
+      </label>
+      <div class="polaroid-edit-actions">
+        <button type="button" class="btn plain" id="pEditCancelBtn">Batal ✕</button>
+        <button type="button" class="btn pink" id="pEditSaveBtn">Simpan ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Surat Edit Modal -->
+  <div class="surat-edit-modal" id="suratEditModal" hidden>
+    <div class="surat-edit-panel sticker" role="dialog" aria-modal="true" aria-labelledby="suratEditTitle">
+      <div class="surat-modal-header">
+        <h3 id="suratEditTitle">Ubah Isi Surat 💌</h3>
+        <button type="button" class="surat-modal-close" id="suratEditCloseBtn" aria-label="Tutup modal">✕</button>
+      </div>
+      <p class="surat-hint-text">
+        Tuliskan ungkapan hatimu yang paling tulus. Gunakan <span class="tag-pill">{nama}</span> untuk nama dia dan
+        <span class="tag-pill">{dari}</span> untuk namamu.
+      </p>
+      <div class="surat-tag-helpers">
+        <button type="button" class="surat-insert-tag" data-tag="{nama}">+ {nama}</button>
+        <button type="button" class="surat-insert-tag" data-tag="{dari}">+ {dari}</button>
+        <button type="button" class="surat-insert-tag template-tag" data-template="sweet">✨ Format Manis</button>
+        <button type="button" class="surat-insert-tag template-tag" data-template="romantic">💖 Format Romantis</button>
+        <button type="button" class="surat-insert-tag template-tag" data-template="funny">🎉 Format Ceria</button>
+      </div>
+      <label for="suratEditTextarea" class="surat-edit-label">Isi Surat:</label>
+      <textarea id="suratEditTextarea" rows="9" placeholder="Tuliskan isi suratmu di sini..."></textarea>
+      <div class="surat-char-counter"><span id="suratCharCount">0 karakter</span></div>
+      <div class="surat-edit-actions">
+        <button type="button" class="btn plain" id="suratEditCancelBtn">Batal ✕</button>
+        <button type="button" class="btn plain" id="suratEditResetBtn"
+          title="Kembalikan surat ke teks bawaan">Kembalikan Awal 🔄</button>
+        <button type="button" class="btn pink" id="suratEditSaveBtn">Simpan Surat ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kejutan Edit Modal -->
+  <div class="kejutan-edit-modal" id="kejutanEditModal" hidden>
+    <div class="kejutan-edit-panel sticker" role="dialog" aria-modal="true" aria-labelledby="kejutanEditTitle">
+      <div class="kejutan-modal-header">
+        <h3 id="kejutanEditTitle">Ubah Hadiah Kejutan 🎁</h3>
+        <button type="button" class="kejutan-modal-close" id="kejutanEditCloseBtn" aria-label="Tutup modal">✕</button>
+      </div>
+      <p class="kejutan-hint-text">
+        Tuliskan hadiah atau pesan rahasia yang akan muncul setelah kartu digosok. Gunakan <span
+          class="tag-pill">{nama}</span> untuk nama dia dan <span class="tag-pill">{dari}</span> untuk namamu.
+      </p>
+      <div class="kejutan-tag-helpers">
+        <button type="button" class="kejutan-insert-tag" data-tag="{nama}">+ {nama}</button>
+        <button type="button" class="kejutan-insert-tag" data-tag="{dari}">+ {dari}</button>
+        <button type="button" class="kejutan-insert-tag template-tag" data-template="hug">🤗 Pelukan &amp;
+          Traktir</button>
+        <button type="button" class="kejutan-insert-tag template-tag" data-template="wishlist">🛍️ Wishlist
+          Impian</button>
+        <button type="button" class="kejutan-insert-tag template-tag" data-template="date">🎟️ Kupon Kencan</button>
+        <button type="button" class="kejutan-insert-tag template-tag" data-template="custom">✨ Hadiah Spesial</button>
+      </div>
+      <label for="kejutanEditTextarea" class="kejutan-edit-label">Isi Hadiah / Kejutan Terakhir:</label>
+      <textarea id="kejutanEditTextarea" rows="4"
+        placeholder="Misal: Voucher gratis makan malam romantis bareng aku..."></textarea>
+      <div class="kejutan-char-counter"><span id="kejutanCharCount">0 karakter</span></div>
+      <div class="kejutan-edit-actions">
+        <button type="button" class="btn plain" id="kejutanEditCancelBtn">Batal ✕</button>
+        <button type="button" class="btn plain" id="kejutanEditResetBtn"
+          title="Kembalikan kejutan ke teks bawaan">Kembalikan Awal 🔄</button>
+        <button type="button" class="btn pink" id="kejutanEditSaveBtn">Simpan Kejutan ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="music-btn btn" id="musicBtn" type="button" aria-label="Putar/pause musik">
+    <span class="icon">
+      <span class="play-icon">🎵</span>
+      <span class="bars"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span
+          class="bar"></span></span>
+    </span>
+  </button>
+  <span class="music-label" id="musicLabel">🎶 Off My Face</span>
+
+  <!-- YouTube Player (hidden) -->
+  <div id="ytPlayerWrap"
+    style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none;opacity:0">
+    <div id="ytPlayer"></div>
+  </div>
+
+  <!-- DATA HASIL EDIT (diisi otomatis oleh tombol "Unduh Versi Final") -->
+  <script type="application/json" id="saved-data">{
+  "state": {
+    "nama": "Sayang",
+    "dari": "Aku",
+    "umur": "",
+    "kejutan": "Hadiah terakhir satu pelukan hangat dari {dari}, candaa. Tp klo beneran mau gapapa kok nnti aku kasih pas kita ketemuu hehe 🥺💖",
+    "surat": "Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere's a little piece of my love for you",
+    "alasan": []
+  },
+  "polaroids": [
+    {
+      "id": 1,
+      "title": "Pertama Kali Req panggil Sayang 💌",
+      "date": "15 Mei",
+      "desc": "Bikin Jantung jedag jedug pas baca",
+      "note": "Pas baca bikin kena stun, trs bingung mau respon apa. karena salting juga akhirnya dipanggil samyang 🥺",
+      "tape": "pink",
+      "sticker": "🌸",
+      "type": "img-1",
+      "userImg": "img/1.png",
+      "objectFit": "cover"
+    },
+    {
+      "id": 2,
+      "title": "Pertama Kali Foto berdua di Roblox 🎮",
+      "date": "14 June",
+      "desc": "Walaupun cuma di Roblox, tp rasanya seneng bangett",
+      "note": "Seneng banget bisa foto berdua sama kamu meskipun cuma di roblox. Walaupun mainnya ga berdua tapi rasanya kaya dunia milik berdua 💖",
+      "tape": "mint",
+      "sticker": "⭐",
+      "type": "img-2",
+      "userImg": "img/2.png",
+      "objectFit": "cover"
+    },
+    {
+      "id": 3,
+      "title": "Pertama kali kamu, ngirim pap ",
+      "date": "14 June",
+      "desc": "ini angle nya yang salah atau kamu yang looks like an angel",
+      "note": "Pertama kali kamu ngirim pap. Aku langsung terpana sama cantiknya kamu. Untungnya kamu bukan pace pace 😭",
+      "tape": "butter",
+      "sticker": "📌",
+      "type": "img-3",
+      "userImg": "img/3.jpg",
+      "objectFit": "cover",
+      "objectPosition": "center 50%",
+      "transform": "scale(1.05)",
+      "bg": "#000000"
+    },
+    {
+      "id": 4,
+      "title": "Tbtb kamu ngirim pap ✨",
+      "date": "22 June",
+      "desc": "Cantiknya kaya apotik tutup. Gaada obat",
+      "note": "Rasanya waktu mau berhenti pas liat pesan isinya foto kamu, fokusnya cuma ke kamu dan gabisa dipungkiri lagi hati ini dibuat jedag jedug sama cantiknya kamu 💖",
+      "tape": "sky",
+      "sticker": "🎀",
+      "type": "img-4",
+      "userImg": "img/4.png",
+      "objectFit": "cover"
+    },
+    {
+      "id": 5,
+      "title": "Ucapan Selamat Ulang Tahun! 🎂",
+      "date": "Hari Spesialku",
+      "desc": "ucapan spesial dari orang tersayang",
+      "note": "Makasih banyak ya sayang, ucapan yg kamu kasih sangat2 membuat aku tersentuh dan secara gasadar tbtb keluar air mata setelah bacanya hehe. love u sayang. alwayss love u 💕",
+      "tape": "coral",
+      "sticker": "🎉",
+      "type": "img-6",
+      "userImg": "img/6.png",
+      "objectFit": "cover",
+      "objectPosition": "top"
+    }
+  ]
+}</script>
+
+  <script>
+    (function () {
+      'use strict';
+      var $ = function (s) { return document.querySelector(s); };
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      var DEF = {
+        nama: 'Sayang',
+        dari: 'Aku',
+        umur: '',
+        kejutan: 'Hadiah terakhir satu pelukan hangat dari {dari}, candaa. Tp klo beneran mau gapapa kok nnti aku kasih pas kita ketemuu hehe 🥺💖',
+        surat: 'Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah atau hal yang pengen kamu ceritain, jangan pernah ragu untuk cerita ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere\'s a little piece of my love for you',
+        alasan: []
+      };
+      var S = JSON.parse(JSON.stringify(DEF));
+      var hasData = false;
+
+      /* ---------- share link encode/decode ---------- */
+      function enc(o) {
+        var bytes = new TextEncoder().encode(JSON.stringify(o)), s = '';
+        for (var i = 0; i < bytes.length; i++) s += String.fromCharCode(bytes[i]);
+        return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      }
+      function dec(h) {
+        h = h.replace(/-/g, '+').replace(/_/g, '/');
+        while (h.length % 4) h += '=';
+        var bin = atob(h), bytes = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        return JSON.parse(new TextDecoder().decode(bytes));
+      }
+      function cleanStr(v, max) { return typeof v === 'string' ? v.slice(0, max) : null; }
+      function cleanArr(v) {
+        if (!Array.isArray(v)) return null;
+        var out = v.filter(function (x) { return typeof x === 'string' && x.trim(); }).map(function (x) { return x.slice(0, 200); }).slice(0, 12);
+        return out.length ? out : null;
+      }
+      function merge(o) {
+        var t;
+        if ((t = cleanStr(o.nama, 40))) S.nama = t;
+        if ((t = cleanStr(o.dari, 40))) S.dari = t;
+        if ((t = cleanStr(o.umur, 3)) !== null) S.umur = t;
+        if ((t = cleanStr(o.kejutan, 300))) S.kejutan = t;
+        if ((t = cleanStr(o.surat, 2000))) S.surat = t;
+        if ((t = cleanArr(o.alasan))) S.alasan = t;
+      }
+
+      /* ---------- MUAT DATA: embedded (hasil ekspor) > localStorage (draft) ---------- */
+      var SURAT_STORAGE_KEY = 'web_ulang_tahun_surat_v2';
+      var KEJUTAN_STORAGE_KEY = 'web_ulang_tahun_kejutan_v2';
+      var h = location.hash.replace(/^#/, '');
+      var EDIT_MODE = (h === 'edit');
+      var EMBEDDED = null;
+      try { EMBEDDED = JSON.parse(document.getElementById('saved-data').textContent); } catch (e) { EMBEDDED = null; }
+      try {
+        if (EMBEDDED && EMBEDDED.state) merge(EMBEDDED.state);
+        if (h && !EDIT_MODE) { merge(dec(h)); hasData = true; }
+        else if (!EMBEDDED || EDIT_MODE) {
+          var savedSurat = localStorage.getItem(SURAT_STORAGE_KEY);
+          if (savedSurat && savedSurat.indexOf('Terima kasih sudah jadi orang yang paling sabar') === -1) S.surat = savedSurat;
+          var savedKejutan = localStorage.getItem(KEJUTAN_STORAGE_KEY);
+          if (savedKejutan && savedKejutan.indexOf('kue dan es krim jadi urusanku') === -1) S.kejutan = savedKejutan;
+        }
+      } catch (e) { hasData = false; }
+      if (EMBEDDED && !EDIT_MODE) document.body.classList.add('viewer');
+
+      window.addEventListener('hashchange', function () {
+        if (location.hash === '#edit') {
+          document.body.classList.remove('viewer');
+        } else if (EMBEDDED) {
+          document.body.classList.add('viewer');
+        }
+      });
+
+      function fmt(t) { return String(t).replace(/\{nama\}/g, S.nama).replace(/\{dari\}/g, S.dari); }
+      function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+      /* ---------- toast ---------- */
+      var toastT;
+      function toast(msg) {
+        var el = $('#toast'); el.textContent = msg; el.classList.add('show');
+        clearTimeout(toastT); toastT = setTimeout(function () { el.classList.remove('show'); }, 2600);
+      }
+
+      /* ---------- confetti ---------- */
+      var cv = $('#confetti'), ctx = cv.getContext('2d'), parts = [], raf = 0, dpr = 1;
+      function size() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        cv.width = innerWidth * dpr; cv.height = innerHeight * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      addEventListener('resize', size); size();
+      var COLORS = ['#FF7BA5', '#FFD86B', '#9BE3C8', '#A9D8FF', '#D9C2FF', '#FFFFFF', '#FFBFA3', '#FFF59D'];
+      function burst(x, y, n) {
+        n = n || 90; if (reduce) n = Math.min(n, 24);
+        for (var i = 0; i < n; i++) {
+          var a = Math.random() * Math.PI * 2, v = 4 + Math.random() * 9;
+          parts.push({
+            x: x, y: y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 6, r: Math.random() * 6.28, vr: (Math.random() - .5) * .4,
+            s: 6 + Math.random() * 7, c: COLORS[(Math.random() * COLORS.length) | 0], life: 0, max: 90 + Math.random() * 60,
+            shape: Math.random() < .3 ? 'circle' : (Math.random() < .5 ? 'star' : 'rect')
+          });
+        }
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+      function tick() {
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        parts = parts.filter(function (p) { return p.life < p.max; });
+        parts.forEach(function (p) {
+          p.life++; p.vx *= .985; p.vy += .28; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+          ctx.globalAlpha = Math.min(1, (p.max - p.life) / 25);
+          ctx.fillStyle = p.c;
+          if (p.shape === 'circle') {
+            ctx.beginPath(); ctx.arc(0, 0, p.s / 2, 0, Math.PI * 2); ctx.fill();
+          } else if (p.shape === 'star') {
+            ctx.font = (p.s * 1.5) + 'px serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('✨', 0, 0);
+          } else {
+            ctx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+          }
+          ctx.restore();
+        });
+        raf = parts.length ? requestAnimationFrame(tick) : 0;
+        if (!raf) ctx.clearRect(0, 0, innerWidth, innerHeight);
+      }
+
+      /* ---------- sparkle cursor trail ---------- */
+      if (!reduce) {
+        var sparkleEmojis = ['✨', '⭐', '💖', '🌟', '🌸'];
+        var lastSparkle = 0;
+        document.addEventListener('mousemove', function (e) {
+          var now = Date.now();
+          if (now - lastSparkle < 120) return;
+          lastSparkle = now;
+          var sp = document.createElement('span');
+          sp.className = 'sparkle';
+          sp.textContent = sparkleEmojis[(Math.random() * sparkleEmojis.length) | 0];
+          sp.style.left = e.clientX + 'px';
+          sp.style.top = e.clientY + 'px';
+          document.body.appendChild(sp);
+          setTimeout(function () { sp.remove(); }, 800);
+        });
+      }
+
+      /* ---------- floating emoji parade ---------- */
+      (function () {
+        var box = $('#floaters'), em = ['💗', '✨', '🌸', '💖', '⭐', '🎀', '🧁', '🎉', '🌟', '💫', '🦋', '🍰'];
+        em.forEach(function (e, i) {
+          var s = document.createElement('span');
+          s.textContent = e;
+          s.style.left = (4 + i * 8 + Math.random() * 4) + '%';
+          s.style.fontSize = (1.1 + Math.random() * 1.2) + 'rem';
+          s.style.animationDuration = (16 + Math.random() * 12) + 's';
+          s.style.animationDelay = (-Math.random() * 20) + 's';
+          box.appendChild(s);
+        });
+      })();
+
+      /* =========================================
+         POLAROID MEMORY GALLERY
+         ========================================= */
+      var POLAROID_STORAGE_KEY = 'web_ulang_tahun_polaroids_v5';
+      var POLAROID_SVGS = {
+        'svg-icecream': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgIce" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFE8F1"/><stop offset="100%" stop-color="#FFF5E4"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgIce)"/><path d="M30 70 Q45 50 70 60 Q90 40 115 60 Q135 60 140 75 Z" fill="#FFFFFF" opacity="0.85"/><path d="M190 90 Q210 70 235 80 Q255 65 275 85 Q285 85 290 100 Z" fill="#FFFFFF" opacity="0.85"/><circle cx="260" cy="50" r="24" fill="#FFD86B" opacity="0.9"/><text x="142" y="95" font-size="28" text-anchor="middle">💖</text><text x="75" y="120" font-size="18">✨</text><text x="220" y="125" font-size="20">✨</text><text x="145" y="130" font-size="16">💕</text><g transform="translate(105, 175) rotate(14)"><polygon points="0,35 -30,-25 30,-25" fill="#E6A868" stroke="#3D1F33" stroke-width="3" stroke-linejoin="round"/><path d="M-20,-10 L20,-10 M-15,5 L15,5 M-10,20 L10,20" stroke="#C98845" stroke-width="2"/><circle cx="0" cy="-35" r="34" fill="#FF8FB5" stroke="#3D1F33" stroke-width="3"/><circle cx="-10" cy="-45" r="4" fill="#FFF" opacity="0.8"/><circle cx="-8" cy="-32" r="3" fill="#3D1F33"/><circle cx="8" cy="-32" r="3" fill="#3D1F33"/><path d="M-4 -26 Q0 -22 4 -26" stroke="#3D1F33" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="-14" cy="-28" r="4" fill="#FF5C8A" opacity="0.6"/><circle cx="14" cy="-28" r="4" fill="#FF5C8A" opacity="0.6"/><circle cx="0" cy="-68" r="10" fill="#FF3366" stroke="#3D1F33" stroke-width="2.5"/></g><g transform="translate(195, 175) rotate(-14)"><polygon points="0,35 -30,-25 30,-25" fill="#E6A868" stroke="#3D1F33" stroke-width="3" stroke-linejoin="round"/><path d="M-20,-10 L20,-10 M-15,5 L15,5 M-10,20 L10,20" stroke="#C98845" stroke-width="2"/><circle cx="0" cy="-35" r="34" fill="#9BE3C8" stroke="#3D1F33" stroke-width="3"/><circle cx="10" cy="-45" r="4" fill="#FFF" opacity="0.8"/><circle cx="-8" cy="-32" r="3" fill="#3D1F33"/><circle cx="8" cy="-32" r="3" fill="#3D1F33"/><path d="M-4 -26 Q0 -22 4 -26" stroke="#3D1F33" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="-14" cy="-28" r="4" fill="#FF8FB5" opacity="0.6"/><circle cx="14" cy="-28" r="4" fill="#FF8FB5" opacity="0.6"/><rect x="-12" y="-55" width="7" height="3" rx="1.5" fill="#FFD86B" transform="rotate(20 -12 -55)"/><rect x="8" y="-58" width="7" height="3" rx="1.5" fill="#FF7BA5" transform="rotate(-30 8 -58)"/></g></svg>',
+        'svg-sunset': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgSunset" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF7BA5"/><stop offset="45%" stop-color="#FFBFA3"/><stop offset="70%" stop-color="#FFD86B"/><stop offset="100%" stop-color="#FFF3A0"/></linearGradient><linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFA62B" stop-opacity="0.85"/><stop offset="35%" stop-color="#76B5EE"/><stop offset="100%" stop-color="#3A7CB8"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgSunset)"/><circle cx="150" cy="155" r="48" fill="#FFF59D"/><circle cx="150" cy="155" r="58" fill="#FFF59D" opacity="0.4"/><path d="M50 80 Q60 70 70 80 Q80 70 90 80" fill="none" stroke="#3D1F33" stroke-width="2.5" stroke-linecap="round"/><path d="M85 62 Q92 54 100 62 Q107 54 115 62" fill="none" stroke="#3D1F33" stroke-width="2" stroke-linecap="round"/><path d="M220 95 Q228 87 236 95 Q244 87 252 95" fill="none" stroke="#3D1F33" stroke-width="2" stroke-linecap="round"/><rect x="0" y="155" width="300" height="145" fill="url(#oceanGrad)"/><ellipse cx="150" cy="170" rx="36" ry="4" fill="#FFF3A0" opacity="0.8"/><ellipse cx="150" cy="182" rx="28" ry="3.5" fill="#FFF3A0" opacity="0.7"/><ellipse cx="150" cy="195" rx="38" ry="3" fill="#FFF3A0" opacity="0.6"/><ellipse cx="150" cy="208" rx="24" ry="2.5" fill="#FFF3A0" opacity="0.5"/><path d="M0 215 Q80 200 150 215 T300 210 L300 300 L0 300 Z" fill="#E8B88A" stroke="#3D1F33" stroke-width="3"/><path d="M0 235 Q100 220 200 235 T300 230" fill="none" stroke="#D19E6E" stroke-width="3"/><g fill="#3D1F33"><circle cx="134" cy="188" r="11"/><path d="M123 225 C123 205 145 205 145 225 Z"/><circle cx="158" cy="191" r="10.5"/><path d="M147 225 C147 206 169 206 169 225 Z"/><text x="146" y="172" font-size="16" text-anchor="middle" fill="#FF5C8A">💖</text></g></svg>',
+        'svg-rain': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgRain" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A9D8FF"/><stop offset="100%" stop-color="#D9C2FF"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgRain)"/><g fill="#FFFFFF" opacity="0.65"><ellipse cx="40" cy="50" rx="3" ry="8" transform="rotate(15 40 50)"/> <ellipse cx="90" cy="90" rx="3.5" ry="11" transform="rotate(15 90 90)"/><ellipse cx="70" cy="140" rx="2.5" ry="7" transform="rotate(15 70 140)"/><ellipse cx="160" cy="40" rx="3" ry="9" transform="rotate(15 160 40)"/><ellipse cx="230" cy="70" rx="3.5" ry="10" transform="rotate(15 230 70)"/><ellipse cx="260" cy="130" rx="3" ry="8" transform="rotate(15 260 130)"/><ellipse cx="190" cy="120" rx="2.5" ry="7" transform="rotate(15 190 120)"/></g><path d="M-10 25 Q75 45 150 25 Q225 45 310 25" fill="none" stroke="#3D1F33" stroke-width="2"/><circle cx="50" cy="35" r="7" fill="#FFD86B"/><circle cx="100" cy="38" r="7" fill="#FF7BA5"/><circle cx="150" cy="27" r="7" fill="#FFF59D"/><circle cx="200" cy="38" r="7" fill="#9BE3C8"/><circle cx="250" cy="35" r="7" fill="#FFD86B"/><rect x="0" y="210" width="300" height="90" fill="#DDB288" stroke="#3D1F33" stroke-width="3"/><rect x="0" y="210" width="300" height="15" fill="#F0CAA4" stroke="#3D1F33" stroke-width="3"/><g transform="translate(100, 195)"><rect x="-28" y="-45" width="56" height="50" rx="8" fill="#FF8FB5" stroke="#3D1F33" stroke-width="3"/><path d="M-28 -32 C-45 -32 -45 -10 -28 -10" fill="none" stroke="#3D1F33" stroke-width="3"/><path d="M0 -15 C-12 -28 -12 -38 -4 -38 C0 -38 0 -35 0 -35 C0 -35 0 -38 4 -38 C12 -38 12 -28 0 -15 Z" fill="#FFFFFF"/><path d="M-5 -55 Q-12 -70 -2 -85" fill="none" stroke="#FF8FB5" stroke-width="2.5" stroke-linecap="round"/><path d="M5 -55 Q12 -70 2 -85" fill="none" stroke="#FF8FB5" stroke-width="2.5" stroke-linecap="round"/></g><g transform="translate(180, 195)"><rect x="-28" y="-45" width="56" height="50" rx="8" fill="#A9D8FF" stroke="#3D1F33" stroke-width="3"/><path d="M28 -32 C45 -32 45 -10 28 -10" fill="none" stroke="#3D1F33" stroke-width="3"/><circle cx="-7" cy="-22" r="2.5" fill="#3D1F33"/><circle cx="7" cy="-22" r="2.5" fill="#3D1F33"/><path d="M-4 -16 Q0 -12 4 -16" stroke="#3D1F33" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M0 -55 Q-8 -70 0 -85" fill="none" stroke="#A9D8FF" stroke-width="2.5" stroke-linecap="round"/></g><text x="140" y="115" font-size="24" text-anchor="middle">☕✨</text></svg>',
+        'svg-picnic': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgPicnic" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF3F7"/><stop offset="60%" stop-color="#E2F7EE"/><stop offset="100%" stop-color="#C4F0DD"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgPicnic)"/><path d="M-20 20 Q80 15 150 45" fill="none" stroke="#8A5A36" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="22" r="10" fill="#FFB3CB"/><circle cx="80" cy="18" r="9" fill="#FF8FB5"/><circle cx="115" cy="30" r="11" fill="#FFC2D6"/><circle cx="145" cy="45" r="8" fill="#FF8FB5"/><polygon points="25,185 275,185 295,290 5,290" fill="#FFF0F5" stroke="#3D1F33" stroke-width="3"/><path d="M50 185 L35 290 M100 185 L90 290 M150 185 L150 290 M200 185 L210 290 M250 185 L265 290" stroke="#FF7BA5" stroke-width="5" opacity="0.4"/><path d="M20 215 L280 215 M15 245 L285 245 M10 275 L290 275" stroke="#FF7BA5" stroke-width="5" opacity="0.4"/><g transform="translate(100, 195)"><rect x="-35" y="-30" width="70" height="45" rx="6" fill="#DDB288" stroke="#3D1F33" stroke-width="3"/><path d="M-35 -15 L35 -15" stroke="#C4976A" stroke-width="3"/><path d="M-25 -30 C-25 -50 25 -50 25 -30" fill="none" stroke="#3D1F33" stroke-width="3.5"/><text x="0" y="-32" font-size="20" text-anchor="middle">🌸</text></g><g transform="translate(195, 220)"><path d="M-25 15 L25 15 L30 -10 L-20 -20 Z" fill="#FFF9FA" stroke="#3D1F33" stroke-width="2.5"/><path d="M-20 -20 L-25 15" stroke="#3D1F33" stroke-width="2"/><path d="M-22 -5 L27 5" stroke="#FF7BA5" stroke-width="4"/><circle cx="5" cy="-18" r="8" fill="#FF3366" stroke="#3D1F33" stroke-width="2"/></g><text x="145" y="245" font-size="22">🍓</text><text x="70" y="260" font-size="18">🍓</text><text x="215" y="265" font-size="16">🌷</text></svg>',
+        'svg-stars': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1E0E38"/><stop offset="60%" stop-color="#381954"/><stop offset="100%" stop-color="#6A3274"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgNight)"/><g transform="translate(70, 75)"><circle cx="0" cy="0" r="32" fill="#FFD86B"/><circle cx="10" cy="-6" r="28" fill="#1E0E38"/><circle cx="-10" cy="4" r="2" fill="#3D1F33"/><path d="M-15 12 Q-10 16 -6 12" stroke="#3D1F33" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="-16" cy="10" r="3" fill="#FF8FB5" opacity="0.6"/></g><line x1="150" y1="50" x2="250" y2="85" stroke="#FFF59D" stroke-width="3" stroke-linecap="round" opacity="0.8"/><text x="250" y="92" font-size="18">⭐</text><g stroke="#FFC2D6" stroke-dasharray="3,3" stroke-width="2" fill="none"><path d="M150 140 L180 120 L210 135 L210 165 L150 215 L90 165 L90 135 L120 120 Z"/></g><circle cx="150" cy="140" r="4" fill="#FFFFFF"/><circle cx="180" cy="120" r="4" fill="#FFD86B"/><circle cx="210" cy="135" r="4" fill="#FFFFFF"/><circle cx="210" cy="165" r="4" fill="#FFD86B"/><circle cx="150" cy="215" r="5" fill="#FF7BA5"/><circle cx="90" cy="165" r="4" fill="#FFD86B"/><circle cx="90" cy="135" r="4" fill="#FFFFFF"/><circle cx="120" cy="120" r="4" fill="#FFD86B"/><text x="150" y="175" font-size="22" text-anchor="middle" fill="#FFFFFF">✨</text><path d="M0 260 Q150 230 300 260 L300 300 L0 300 Z" fill="#120624"/><circle cx="140" cy="235" r="8" fill="#FFF3F7"/><circle cx="158" cy="236" r="7.5" fill="#FFC2D6"/><path d="M132 260 C132 245 148 245 148 260 Z" fill="#FFF3F7"/><path d="M150 260 C150 247 166 247 166 260 Z" fill="#FFC2D6"/><text x="149" y="222" font-size="13" text-anchor="middle">💖</text></svg>',
+        'svg-birthday': '<svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgBday" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFEBF3"/><stop offset="100%" stop-color="#E8F4FF"/></linearGradient></defs><rect width="300" height="300" fill="url(#bgBday)"/><path d="M-10 20 Q75 50 150 25 Q225 50 310 20" fill="none" stroke="#3D1F33" stroke-width="2"/><polygon points="20,28 45,28 32,55" fill="#FF7BA5" stroke="#3D1F33" stroke-width="2"/><polygon points="65,34 90,34 77,60" fill="#FFD86B" stroke="#3D1F33" stroke-width="2"/><polygon points="110,32 135,32 122,58" fill="#9BE3C8" stroke="#3D1F33" stroke-width="2"/><polygon points="160,30 185,30 172,56" fill="#A9D8FF" stroke="#3D1F33" stroke-width="2"/><polygon points="210,34 235,34 222,60" fill="#D9C2FF" stroke="#3D1F33" stroke-width="2"/><polygon points="255,28 280,28 267,55" fill="#FF8A80" stroke="#3D1F33" stroke-width="2"/><circle cx="50" cy="110" r="24" fill="#FF8FB5" stroke="#3D1F33" stroke-width="2.5"/><path d="M50 134 Q45 160 55 180" fill="none" stroke="#3D1F33" stroke-width="1.5"/><circle cx="250" cy="105" r="22" fill="#9BE3C8" stroke="#3D1F33" stroke-width="2.5"/><path d="M250 127 Q255 155 245 175" fill="none" stroke="#3D1F33" stroke-width="1.5"/><g transform="translate(150, 185)"><rect x="-65" y="-10" width="130" height="55" rx="12" fill="#FFB3CB" stroke="#3D1F33" stroke-width="3"/><ellipse cx="0" cy="-10" rx="65" ry="14" fill="#FFF3F7" stroke="#3D1F33" stroke-width="3"/><rect x="-42" y="-45" width="84" height="40" rx="10" fill="#FFF3F7" stroke="#3D1F33" stroke-width="3"/><path d="M-42 -35 Q-30 -25 -20 -35 Q-10 -25 0 -35 Q10 -25 20 -35 Q30 -25 42 -35 V-45 H-42 Z" fill="#FF7BA5"/><rect x="-5" y="-70" width="10" height="26" rx="3" fill="#FFD86B" stroke="#3D1F33" stroke-width="2.5"/><path d="M0 -70 C-5 -78 -3 -86 0 -92 C3 -86 5 -78 0 -70 Z" fill="#FFA62B"/><path d="M0 -71 C-2 -75 -1 -80 0 -84 C1 -80 2 -75 0 -71 Z" fill="#FFF3A0"/><ellipse cx="0" cy="48" rx="85" ry="12" fill="#FFF0F5" stroke="#3D1F33" stroke-width="3"/><text x="0" y="24" font-size="14" text-anchor="middle">💖 ✨ 💖</text></g><text x="60" y="235" font-size="28">🎁</text><text x="220" y="235" font-size="28">🎉</text></svg>'
+      };
+
+      var DEFAULT_POLAROIDS = [
+        {
+          id: 1,
+          title: 'Pertama Kali Req panggil Sayang 💌',
+          date: '15 Mei',
+          desc: 'Bikin Jantung jedag jedug pas baca',
+          note: 'Pas baca bikin kena stun, trs bingung mau respon apa. karena salting juga akhirnya dipanggil samyang 🥺',
+          tape: 'pink',
+          sticker: '🌸',
+          type: 'img-1',
+          userImg: 'img/1.png',
+          objectFit: 'cover'
+        },
+        {
+          id: 2,
+          title: 'Pertama Kali Foto berdua di Roblox 🎮',
+          date: '14 June',
+          desc: 'Walaupun cuma di Roblox, tp rasanya seneng bangett',
+          note: 'Seneng banget bisa foto berdua sama kamu meskipun cuma di roblox. Walaupun mainnya ga berdua tapi rasanya kaya dunia milik berdua 💖',
+          tape: 'mint',
+          sticker: '⭐',
+          type: 'img-2',
+          userImg: 'img/2.png',
+          objectFit: 'cover'
+        },
+        {
+          id: 3,
+          title: 'Pertama kali kamu, ngirim pap ',
+          date: '14 June',
+          desc: 'ini angle nya yang salah atau kamu yang looks like an angel',
+          note: 'Pertama kali kamu ngirim pap. Aku langsung terpana sama cantiknya kamu. Untungnya kamu bukan pace pace 😭',
+          tape: 'butter',
+          sticker: '📌',
+          type: 'img-3',
+          userImg: 'img/3.jpg',
+          objectFit: 'cover',
+          objectPosition: 'center 50%',
+          transform: 'scale(1.05)',
+          bg: '#000000'
+        },
+        {
+          id: 4,
+          title: 'Tbtb kamu ngirim pap ✨',
+          date: '22 June',
+          desc: 'Cantiknya kaya apotik tutup. Gaada obat',
+          note: 'Rasanya waktu mau berhenti pas liat pesan isinya foto kamu, fokusnya cuma ke kamu dan gabisa dipungkiri lagi hati ini dibuat jedag jedug sama cantiknya kamu 💖',
+          tape: 'sky',
+          sticker: '🎀',
+          type: 'img-4',
+          userImg: 'img/4.png',
+          objectFit: 'cover'
+        },
+        {
+          id: 5,
+          title: 'Ucapan Selamat Ulang Tahun! 🎂',
+          date: 'Hari Spesialku',
+          desc: 'ucapan spesial dari orang tersayang',
+          note: 'Makasih banyak ya sayang, ucapan yg kamu kasih sangat2 membuat aku tersentuh dan secara gasadar tbtb keluar air mata setelah bacanya hehe. love u sayang. alwayss love u 💕',
+          tape: 'coral',
+          sticker: '🎉',
+          type: 'img-6',
+          userImg: 'img/6.png',
+          objectFit: 'cover',
+          objectPosition: 'top'
+        }
+      ];
+
+      /* muat foto: embedded (hasil ekspor) > localStorage (draft) > bawaan */
+      var polaroids = [];
+      if (EMBEDDED && Array.isArray(EMBEDDED.polaroids) && EMBEDDED.polaroids.length) {
+        polaroids = EMBEDDED.polaroids;
+      }
+      if (!EMBEDDED || EDIT_MODE) {
+        try {
+          var savedP = localStorage.getItem(POLAROID_STORAGE_KEY);
+          if (savedP) {
+            var parsedP = JSON.parse(savedP);
+            if (Array.isArray(parsedP) && parsedP.length === DEFAULT_POLAROIDS.length && parsedP.some(function (p) { return p.userImg; })) {
+              polaroids = parsedP;
+            }
+          }
+        } catch (e) { }
+      }
+      if (!Array.isArray(polaroids) || polaroids.length === 0) {
+        polaroids = JSON.parse(JSON.stringify(DEFAULT_POLAROIDS));
+      }
+
+      function savePolaroids() {
+        try { localStorage.setItem(POLAROID_STORAGE_KEY, JSON.stringify(polaroids)); }
+        catch (e) { toast('Penyimpanan lokal penuh / tidak tersedia'); }
+      }
+
+      function getPhotoHTML(item) {
+        if (item.userImg) {
+          var style = '';
+          if (item.objectFit) style += 'object-fit:' + item.objectFit + ';';
+          if (item.objectPosition) style += 'object-position:' + item.objectPosition + ';';
+          if (item.transform) style += 'transform:' + item.transform + ';';
+          if (item.bg) style += 'background-color:' + item.bg + ';';
+          return '<img src="' + esc(item.userImg) + '" alt="' + esc(item.title) + '"' + (style ? ' style="' + style + '"' : '') + ' loading="lazy">';
+        }
+        return POLAROID_SVGS[item.type] || POLAROID_SVGS['svg-birthday'];
+      }
+
+      var currentLightboxIdx = 0;
+      var activeUploadCardIdx = null;
+      var activeEditCardIdx = null;
+
+      function renderPolaroidGrid() {
+        var grid = $('#polaroidGrid');
+        if (!grid) return;
+        grid.innerHTML = '';
+
+        polaroids.forEach(function (item, idx) {
+          var card = document.createElement('div');
+          card.className = 'polaroid-card';
+          card.dataset.idx = idx;
+
+          card.innerHTML =
+            '<div class="washi-tape washi-' + item.tape + '"><span class="tape-pin">' + item.sticker + '</span></div>' +
+            '<div class="polaroid-inner">' +
+            '<div class="polaroid-face polaroid-front">' +
+            '<div class="polaroid-card-actions">' +
+            '<button type="button" class="polaroid-action-btn p-change-btn" data-idx="' + idx + '" title="Ganti foto ini">📷</button>' +
+            '<button type="button" class="polaroid-action-btn p-edit-btn" data-idx="' + idx + '" title="Edit judul &amp; pesan">✏️</button>' +
+            '<button type="button" class="polaroid-action-btn p-zoom-btn" data-idx="' + idx + '" title="Perbesar foto">🔍</button>' +
+            '</div>' +
+            '<div class="polaroid-img-box">' + getPhotoHTML(item) + '<div class="polaroid-img-gloss"></div></div>' +
+            '<div class="polaroid-caption-box">' +
+            '<div><h3 class="polaroid-title">' + esc(fmt(item.title)) + '</h3><p class="polaroid-desc">' + esc(fmt(item.desc)) + '</p></div>' +
+            '<div class="polaroid-footer-meta"><span class="polaroid-date">' + esc(fmt(item.date)) + '</span><span class="polaroid-flip-hint">🔄 Ketuk untuk balik</span></div>' +
+            '</div></div>' +
+            '<div class="polaroid-face polaroid-back">' +
+            '<div class="polaroid-back-header"><h4 class="polaroid-back-title">💌 Catatan Rahasia</h4><span class="polaroid-stamp">LOVE POSTMARK</span></div>' +
+            '<div class="polaroid-secret-msg">' + esc(fmt(item.note)) + '</div>' +
+            '<div class="polaroid-back-footer"><span class="polaroid-back-date">' + esc(fmt(item.date)) + '</span><button type="button" class="polaroid-turn-back-btn">↩️ Balik ke Foto</button></div>' +
+            '</div></div>';
+
+          card.addEventListener('click', function (e) {
+            if (e.target.closest('.polaroid-action-btn')) return;
+            card.classList.toggle('flipped');
+          });
+          grid.appendChild(card);
+        });
+
+        grid.querySelectorAll('.p-change-btn').forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            activeUploadCardIdx = parseInt(this.dataset.idx, 10);
+            var inp = $('#polaroidSingleInput');
+            if (inp) inp.click();
+          });
+        });
+        grid.querySelectorAll('.p-edit-btn').forEach(function (btn) {
+          btn.addEventListener('click', function (e) { e.stopPropagation(); openEditPolaroid(parseInt(this.dataset.idx, 10)); });
+        });
+        grid.querySelectorAll('.p-zoom-btn').forEach(function (btn) {
+          btn.addEventListener('click', function (e) { e.stopPropagation(); openLightbox(parseInt(this.dataset.idx, 10)); });
+        });
+      }
+
+      /* Baca & kompres foto (maks 800px, JPEG) agar ringan */
+      function readImage(file, cb) {
+        var r = new FileReader();
+        r.onload = function (ev) {
+          var img = new Image();
+          img.onload = function () {
+            var s = Math.min(1, 800 / Math.max(img.width, img.height));
+            var c = document.createElement('canvas');
+            c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+            c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+            cb(c.toDataURL('image/jpeg', 0.8));
+          };
+          img.onerror = function () { cb(ev.target.result); };
+          img.src = ev.target.result;
+        };
+        r.readAsDataURL(file);
+      }
+
+      var singleInput = $('#polaroidSingleInput');
+      if (singleInput) {
+        singleInput.addEventListener('change', function () {
+          var file = this.files && this.files[0];
+          if (!file || activeUploadCardIdx === null) return;
+          readImage(file, function (data) {
+            polaroids[activeUploadCardIdx].userImg = data;
+            savePolaroids(); renderPolaroidGrid();
+            toast('Foto berhasil diperbarui! 📸✨');
+            singleInput.value = '';
+          });
+        });
+      }
+
+      var batchInput = $('#polaroidBatchInput');
+      if (batchInput) {
+        batchInput.addEventListener('change', function () {
+          var files = Array.from(this.files || []).slice(0, polaroids.length);
+          if (!files.length) return;
+          var loaded = 0;
+          files.forEach(function (file, i) {
+            readImage(file, function (data) {
+              if (polaroids[i]) polaroids[i].userImg = data;
+              if (++loaded === files.length) {
+                savePolaroids(); renderPolaroidGrid();
+                toast(loaded + ' foto berhasil diunggah! 📸🎉');
+                batchInput.value = '';
+              }
+            });
+          });
+        });
+      }
+
+      var resetPBtn = $('#polaroidResetBtn');
+      if (resetPBtn) {
+        resetPBtn.addEventListener('click', function () {
+          polaroids = JSON.parse(JSON.stringify(DEFAULT_POLAROIDS));
+          savePolaroids(); renderPolaroidGrid();
+          toast('Foto dikembalikan ke ilustrasi awal 🔄✨');
+        });
+      }
+
+      /* Edit modal polaroid */
+      var pEditModal = $('#polaroidEditModal');
+      function openEditPolaroid(idx) {
+        activeEditCardIdx = idx;
+        var p = polaroids[idx];
+        if (!p || !pEditModal) return;
+        $('#pEditTitle').value = p.title;
+        $('#pEditDate').value = p.date;
+        $('#pEditDesc').value = p.desc;
+        $('#pEditNote').value = p.note;
+        pEditModal.hidden = false;
+        $('#pEditTitle').focus();
+      }
+      function closeEditPolaroid() { if (pEditModal) pEditModal.hidden = true; activeEditCardIdx = null; }
+      var pCancelBtn = $('#pEditCancelBtn');
+      if (pCancelBtn) pCancelBtn.addEventListener('click', closeEditPolaroid);
+      if (pEditModal) pEditModal.addEventListener('click', function (e) { if (e.target === pEditModal) closeEditPolaroid(); });
+      var pSaveBtn = $('#pEditSaveBtn');
+      if (pSaveBtn) {
+        pSaveBtn.addEventListener('click', function () {
+          if (activeEditCardIdx === null || !polaroids[activeEditCardIdx]) return;
+          var p = polaroids[activeEditCardIdx];
+          p.title = $('#pEditTitle').value.trim() || p.title;
+          p.date = $('#pEditDate').value.trim() || p.date;
+          p.desc = $('#pEditDesc').value.trim() || p.desc;
+          p.note = $('#pEditNote').value.trim() || p.note;
+          savePolaroids(); renderPolaroidGrid(); closeEditPolaroid();
+          toast('Pesan & kenangan tersimpan! 💝');
+        });
+      }
+
+      /* Lightbox */
+      var lbModal = $('#polaroidLightbox');
+      var lbCard = $('#polaroidLightboxCard');
+      var lbFlipped = false;
+
+      function renderLightboxCard() {
+        var item = polaroids[currentLightboxIdx];
+        if (!item || !lbCard) return;
+        lbCard.innerHTML =
+          '<div class="washi-tape washi-' + item.tape + '"><span class="tape-pin">' + item.sticker + '</span></div>' +
+          '<div class="polaroid-inner" style="' + (lbFlipped ? 'transform: rotateY(180deg);' : '') + '">' +
+          '<div class="polaroid-face polaroid-front">' +
+          '<div class="polaroid-img-box">' + getPhotoHTML(item) + '<div class="polaroid-img-gloss"></div></div>' +
+          '<div class="polaroid-caption-box">' +
+          '<div><h3 class="polaroid-title">' + esc(fmt(item.title)) + '</h3><p class="polaroid-desc">' + esc(fmt(item.desc)) + '</p></div>' +
+          '<div class="polaroid-footer-meta"><span class="polaroid-date">' + esc(fmt(item.date)) + '</span><span class="polaroid-flip-hint">(' + (currentLightboxIdx + 1) + '/' + polaroids.length + ')</span></div>' +
+          '</div></div>' +
+          '<div class="polaroid-face polaroid-back">' +
+          '<div class="polaroid-back-header"><h4 class="polaroid-back-title">💌 Pesan Khusus</h4><span class="polaroid-stamp">SECRET MEMORY</span></div>' +
+          '<div class="polaroid-secret-msg">' + esc(fmt(item.note)) + '</div>' +
+          '<div class="polaroid-back-footer"><span class="polaroid-back-date">' + esc(fmt(item.date)) + '</span><span style="font-size:0.8rem;color:#7A4E68;">Ketuk "Balik Foto" untuk kembali</span></div>' +
+          '</div></div>';
+      }
+      function openLightbox(idx) { currentLightboxIdx = idx; lbFlipped = false; renderLightboxCard(); if (lbModal) lbModal.hidden = false; }
+      function closeLightbox() { if (lbModal) lbModal.hidden = true; }
+
+      var lbClose = $('#polaroidLightboxClose');
+      if (lbClose) lbClose.addEventListener('click', closeLightbox);
+      if (lbModal) lbModal.addEventListener('click', function (e) { if (e.target === lbModal) closeLightbox(); });
+      var lbFlipBtn = $('#polaroidFlipBtn');
+      if (lbFlipBtn) lbFlipBtn.addEventListener('click', function () { lbFlipped = !lbFlipped; renderLightboxCard(); });
+      var lbPrevBtn = $('#polaroidPrevBtn');
+      if (lbPrevBtn) lbPrevBtn.addEventListener('click', function () { currentLightboxIdx = (currentLightboxIdx - 1 + polaroids.length) % polaroids.length; lbFlipped = false; renderLightboxCard(); });
+      var lbNextBtn = $('#polaroidNextBtn');
+      if (lbNextBtn) lbNextBtn.addEventListener('click', function () { currentLightboxIdx = (currentLightboxIdx + 1) % polaroids.length; lbFlipped = false; renderLightboxCard(); });
+      if (lbCard) lbCard.addEventListener('click', function (e) {
+        if (e.target.closest('button') && !e.target.closest('.polaroid-turn-back-btn')) return;
+        lbFlipped = !lbFlipped;
+        renderLightboxCard();
+      });
+
+
+      addEventListener('keydown', function (e) {
+        if (lbModal && !lbModal.hidden) {
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowLeft' && lbPrevBtn) lbPrevBtn.click();
+          if (e.key === 'ArrowRight' && lbNextBtn) lbNextBtn.click();
+          if (e.key === ' ' && lbFlipBtn) { e.preventDefault(); lbFlipBtn.click(); }
+        } else if (pEditModal && !pEditModal.hidden) {
+          if (e.key === 'Escape') closeEditPolaroid();
+        } else if (suratEditModal && !suratEditModal.hidden) {
+          if (e.key === 'Escape') closeSuratModal();
+        } else if (kejutanEditModal && !kejutanEditModal.hidden) {
+          if (e.key === 'Escape') closeKejutanModal();
+        }
+      });
+
+      /* ---------- cake ---------- */
+      var cake = $('#cake'), lit = true;
+      function setLit(v) {
+        lit = v;
+        cake.classList.toggle('out', !v);
+        $('#blowStatus').textContent = v
+          ? 'Buat permohonan dulu, lalu tiup lilinnya. 🙏✨'
+          : 'Yeay! Semoga permohonanmu dikabulkan semesta. 🥳🎉';
+        if (!v) {
+          var r = cake.getBoundingClientRect();
+          burst(r.left + r.width / 2, r.top + r.height / 3, 90);
+        }
+      }
+      cake.addEventListener('click', function () { setLit(!lit); });
+
+      /* ---------- letter ---------- */
+      var env = $('#envBtn');
+      env.addEventListener('click', function () {
+        var open = env.getAttribute('aria-expanded') !== 'true';
+        env.setAttribute('aria-expanded', String(open));
+        $('#letterWrap').classList.toggle('open', open);
+        $('#envCap').textContent = open ? 'Ketuk lagi untuk menutup 📨' : 'Ketuk amplopnya ✉️';
+        if (open) {
+          setTimeout(function () { $('#letter').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); }, 250);
+        }
+      });
+
+      /* ---------- letter edit modal ---------- */
+      var suratEditModal = $('#suratEditModal');
+      var editSuratBtn = $('#editSuratBtn');
+      var editSuratInnerBtn = $('#editSuratInnerBtn');
+      var suratEditTextarea = $('#suratEditTextarea');
+      var suratCharCount = $('#suratCharCount');
+
+      function updateSuratCharCount() {
+        if (!suratEditTextarea || !suratCharCount) return;
+        suratCharCount.textContent = suratEditTextarea.value.length + ' karakter';
+      }
+      function openSuratModal() {
+        if (!suratEditModal) return;
+        suratEditTextarea.value = S.surat || '';
+        updateSuratCharCount();
+        suratEditModal.hidden = false;
+        suratEditTextarea.focus();
+      }
+      function closeSuratModal() { if (suratEditModal) suratEditModal.hidden = true; }
+
+      if (editSuratBtn) editSuratBtn.addEventListener('click', openSuratModal);
+      if (editSuratInnerBtn) editSuratInnerBtn.addEventListener('click', openSuratModal);
+      $('#suratEditCloseBtn').addEventListener('click', closeSuratModal);
+      $('#suratEditCancelBtn').addEventListener('click', closeSuratModal);
+      suratEditModal.addEventListener('click', function (e) { if (e.target === suratEditModal) closeSuratModal(); });
+      suratEditTextarea.addEventListener('input', updateSuratCharCount);
+
+      var SURAT_TMPL = {
+        sweet: 'Selamat ulang tahun, {nama}! 💖\n\nTerima kasih sudah jadi orang yang selalu membawa tawa dan kehangatan di setiap hariku.\n\nSemoga di usiamu yang baru ini, setiap langkahmu dipenuhi kebahagiaan, kesehatan, dan impianmu terwujud satu per satu. Aku beruntung banget punya kamu di hidupku.\n\nDengan penuh cinta,\n{dari}',
+        romantic: 'Untuk kesayanganku, {nama} ✨\n\nSelamat hari lahir, cintaku. Dari miliaran manusia di dunia, hatiku selalu memilih kamu.\n\nTerima kasih untuk setiap pelukan, pengertian, dan senyuman yang nggak pernah gagal bikin hariku indah. Semoga semesta selalu menjagamu dan kebahagiaan selalu memelukmu.\n\nSelamanya bersamamu,\n{dari}',
+        funny: 'HBD buat orang paling bawel tapi paling ngangenin sedunia, {nama}! 🎂🎉\n\nSelamat bertambah umur! Semoga makin pinter, makin bahagia, dan makin sabar ngadepin aku ya. Pokoknya jangan pernah bosen sama aku, karena aku nggak akan pernah bosen bikin kamu ketawa.\n\nDari penggemar beratmu,\n{dari} 💖'
+      };
+      document.querySelectorAll('.surat-insert-tag').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var tag = btn.getAttribute('data-tag'), template = btn.getAttribute('data-template');
+          if (tag) {
+            var start = suratEditTextarea.selectionStart || 0, end = suratEditTextarea.selectionEnd || 0, val = suratEditTextarea.value;
+            suratEditTextarea.value = val.substring(0, start) + tag + val.substring(end);
+            suratEditTextarea.selectionStart = suratEditTextarea.selectionEnd = start + tag.length;
+            suratEditTextarea.focus(); updateSuratCharCount();
+          } else if (template && SURAT_TMPL[template]) {
+            suratEditTextarea.value = SURAT_TMPL[template];
+            updateSuratCharCount(); toast('Template surat diterapkan! ✨');
+          }
+        });
+      });
+      $('#suratEditResetBtn').addEventListener('click', function () {
+        suratEditTextarea.value = DEF.surat; updateSuratCharCount(); toast('Teks surat dikembalikan ke bawaan 🔄');
+      });
+      $('#suratEditSaveBtn').addEventListener('click', function () {
+        var newSurat = suratEditTextarea.value.trim();
+        if (!newSurat) { toast('Isi surat tidak boleh kosong ya! 💌'); return; }
+        S.surat = newSurat;
+        try { localStorage.setItem(SURAT_STORAGE_KEY, newSurat); } catch (e) { }
+        $('#fSurat').value = newSurat;
+        var letterEl = $('#letter');
+        letterEl.textContent = fmt(S.surat);
+        if (!$('#letterWrap').classList.contains('open')) {
+          env.setAttribute('aria-expanded', 'true');
+          $('#letterWrap').classList.add('open');
+          $('#envCap').textContent = 'Ketuk lagi untuk menutup 📨';
+        }
+        closeSuratModal();
+        toast('Isi surat berhasil diperbarui! 💌✨');
+        var r = letterEl.getBoundingClientRect();
+        burst(r.left + r.width / 2, Math.max(80, r.top + r.height / 3), 75);
+        setTimeout(function () { letterEl.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); }, 200);
+      });
+
+      /* ---------- kartu gosok ---------- */
+      var scv = $('#scratchCv'), sctx = scv.getContext('2d'), sState = { done: false, down: false, last: null, dirty: false };
+      function initScratch() {
+        var box = $('#scratchBox'), w = box.clientWidth, hh = box.clientHeight;
+        if (!w || !hh) return;
+        var d = Math.min(window.devicePixelRatio || 1, 2);
+        scv.width = Math.round(w * d); scv.height = Math.round(hh * d);
+        scv.classList.remove('done');
+        $('#scratchAgain').hidden = true; $('#scratchSkip').hidden = false;
+        sState.done = false; sState.dirty = false; sState.last = null;
+        sctx.globalCompositeOperation = 'source-over';
+        sctx.setTransform(1, 0, 0, 1, 0, 0);
+        sctx.save(); sctx.scale(d, d);
+        var g = sctx.createLinearGradient(0, 0, w, hh);
+        g.addColorStop(0, '#FF9DBD'); g.addColorStop(.3, '#D9C2FF'); g.addColorStop(.7, '#A9D8FF'); g.addColorStop(1, '#9BE3C8');
+        sctx.fillStyle = g; sctx.fillRect(0, 0, w, hh);
+        sctx.globalAlpha = .55; sctx.font = '22px serif'; sctx.textAlign = 'center'; sctx.textBaseline = 'middle';
+        var sym = ['💖', '✨', '⭐', '🌸', '🎀', '🧁'];
+        for (var y = 18, r = 0; y < hh; y += 40, r++) {
+          for (var x = (r % 2 ? 38 : 18), k = 0; x < w; x += 40, k++) { sctx.fillText(sym[(r + k) % sym.length], x, y); }
+        }
+        sctx.globalAlpha = 1;
+        sctx.font = '800 30px "Baloo 2", system-ui, sans-serif';
+        var label = '✨ Gosok di sini ✨', tw = sctx.measureText(label).width;
+        sctx.fillStyle = 'rgba(255,253,254,.92)'; sctx.strokeStyle = '#3D1F33'; sctx.lineWidth = 3;
+        sctx.beginPath();
+        if (sctx.roundRect) sctx.roundRect(w / 2 - tw / 2 - 20, hh / 2 - 27, tw + 40, 54, 27);
+        else sctx.rect(w / 2 - tw / 2 - 20, hh / 2 - 27, tw + 40, 54);
+        sctx.fill(); sctx.stroke();
+        sctx.fillStyle = '#3D1F33'; sctx.fillText(label, w / 2, hh / 2 + 2);
+        sctx.restore();
+      }
+      function pt(e) {
+        var r = scv.getBoundingClientRect();
+        return { x: (e.clientX - r.left) * scv.width / r.width, y: (e.clientY - r.top) * scv.height / r.height };
+      }
+      function scratchTo(p) {
+        sctx.globalCompositeOperation = 'destination-out';
+        sctx.lineCap = 'round'; sctx.lineJoin = 'round';
+        sctx.lineWidth = (scv.width / scv.clientWidth) * 46;
+        var l = sState.last || p;
+        sctx.beginPath(); sctx.moveTo(l.x, l.y); sctx.lineTo(p.x + .01, p.y); sctx.stroke();
+        sState.last = p; sState.dirty = true;
+      }
+      function revealScratch() {
+        if (sState.done) return;
+        sState.done = true; scv.classList.add('done');
+        $('#scratchAgain').hidden = false; $('#scratchSkip').hidden = true;
+        var r = $('#scratchBox').getBoundingClientRect();
+        burst(r.left + r.width / 2, r.top + r.height / 2, 80);
+      }
+      function checkScratch() {
+        if (sState.done) return;
+        var data;
+        try { data = sctx.getImageData(0, 0, scv.width, scv.height).data; } catch (e) { return; }
+        var clear = 0, total = 0;
+        for (var i = 3; i < data.length; i += 64) { total++; if (data[i] < 40) clear++; }
+        if (total && clear / total > .45) revealScratch();
+      }
+      scv.addEventListener('pointerdown', function (e) {
+        if (sState.done) return;
+        sState.down = true; sState.last = null;
+        try { scv.setPointerCapture(e.pointerId); } catch (x) { }
+        scratchTo(pt(e)); e.preventDefault();
+      });
+      scv.addEventListener('pointermove', function (e) { if (sState.down && !sState.done) scratchTo(pt(e)); });
+      function endScratch() { if (!sState.down) return; sState.down = false; sState.last = null; checkScratch(); }
+      scv.addEventListener('pointerup', endScratch);
+      scv.addEventListener('pointercancel', endScratch);
+      $('#scratchSkip').addEventListener('click', revealScratch);
+      $('#scratchAgain').addEventListener('click', initScratch);
+      var rzT;
+      addEventListener('resize', function () {
+        clearTimeout(rzT);
+        rzT = setTimeout(function () { if (!sState.dirty && !sState.done) initScratch(); }, 150);
+      });
+
+      /* ---------- kejutan edit modal ---------- */
+      var kejutanEditModal = $('#kejutanEditModal');
+      var editKejutanBtn = $('#editKejutanBtn');
+      var scratchEditBtn = $('#scratchEditBtn');
+      var kejutanEditTextarea = $('#kejutanEditTextarea');
+      var kejutanCharCount = $('#kejutanCharCount');
+
+      function updateKejutanCharCount() { kejutanCharCount.textContent = kejutanEditTextarea.value.length + ' karakter'; }
+      function openKejutanModal() {
+        kejutanEditTextarea.value = S.kejutan || '';
+        updateKejutanCharCount();
+        kejutanEditModal.hidden = false;
+        kejutanEditTextarea.focus();
+      }
+      function closeKejutanModal() { kejutanEditModal.hidden = true; }
+
+      if (editKejutanBtn) editKejutanBtn.addEventListener('click', openKejutanModal);
+      if (scratchEditBtn) scratchEditBtn.addEventListener('click', openKejutanModal);
+      $('#kejutanEditCloseBtn').addEventListener('click', closeKejutanModal);
+      $('#kejutanEditCancelBtn').addEventListener('click', closeKejutanModal);
+      kejutanEditModal.addEventListener('click', function (e) { if (e.target === kejutanEditModal) closeKejutanModal(); });
+      kejutanEditTextarea.addEventListener('input', updateKejutanCharCount);
+
+      var KEJUTAN_TMPL = {
+        hug: 'Hadiah terakhir: satu pelukan erat dari {dari}, gratis, boleh ditagih sekarang juga. Setelah itu, kue dan es krim jadi urusanku 🍰🍦',
+        wishlist: '🎉 Selamat {nama}! Kupon ini berlaku untuk 1 barang di wishlist kamu yang paling kamu impikan. Kasih tahu {dari} hari ini juga ya! 🎁🛍️',
+        date: '🎟️ KUPON KENCAN SPESIAL: Seharian penuh ditraktir dan ditemani sama {dari}! Bebas pilih mau jalan-jalan ke mana aja dan makan apa aja, siap nurutin kemauanmu! 💖✨',
+        custom: 'Hadiah rahasia untuk {nama}: Coba cek pesan khusus / saku tasmu sekarang... Ada sesuatu yang sudah {dari} persiapkan spesial untukmu hari ini! 🤫🎁'
+      };
+      document.querySelectorAll('.kejutan-insert-tag').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var tag = btn.getAttribute('data-tag'), template = btn.getAttribute('data-template');
+          if (tag) {
+            var start = kejutanEditTextarea.selectionStart || 0, end = kejutanEditTextarea.selectionEnd || 0, val = kejutanEditTextarea.value;
+            kejutanEditTextarea.value = val.substring(0, start) + tag + val.substring(end);
+            kejutanEditTextarea.selectionStart = kejutanEditTextarea.selectionEnd = start + tag.length;
+            kejutanEditTextarea.focus(); updateKejutanCharCount();
+          } else if (template && KEJUTAN_TMPL[template]) {
+            kejutanEditTextarea.value = KEJUTAN_TMPL[template];
+            updateKejutanCharCount(); toast('Template kejutan diterapkan! 🎁✨');
+          }
+        });
+      });
+      $('#kejutanEditResetBtn').addEventListener('click', function () {
+        kejutanEditTextarea.value = DEF.kejutan; updateKejutanCharCount(); toast('Hadiah kejutan dikembalikan ke bawaan 🔄');
+      });
+      $('#kejutanEditSaveBtn').addEventListener('click', function () {
+        var newKejutan = kejutanEditTextarea.value.trim();
+        if (!newKejutan) { toast('Isi hadiah kejutan tidak boleh kosong ya! 🎁'); return; }
+        S.kejutan = newKejutan;
+        try { localStorage.setItem(KEJUTAN_STORAGE_KEY, newKejutan); } catch (e) { }
+        $('#fKejutan').value = newKejutan;
+        $('#prize').textContent = fmt(S.kejutan);
+        initScratch();
+        closeKejutanModal();
+        toast('Hadiah kejutan berhasil disimpan! 🎁✨');
+        var sBox = $('#scratchBox'), r = sBox.getBoundingClientRect();
+        burst(r.left + r.width / 2, Math.max(80, r.top + r.height / 3), 75);
+        setTimeout(function () { sBox.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); }, 200);
+      });
+
+      /* ---------- scroll reveal ---------- */
+      if (!reduce && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section, .kawaii-divider').forEach(function (el) {
+          el.classList.add('reveal');
+          observer.observe(el);
+        });
+      }
+
+      /* ---------- render all ---------- */
+      function render() {
+        document.title = 'Selamat ulang tahun, ' + S.nama + '!';
+        $('#nama').textContent = S.nama;
+        $('#dari').textContent = S.dari;
+        var age = (S.umur || '').trim();
+        $('#ageBadge').hidden = !age;
+        $('#ageNum').textContent = age;
+        $('#letter').textContent = fmt(S.surat);
+        $('#prize').textContent = fmt(S.kejutan);
+        renderPolaroidGrid();
+      }
+
+      /* ---------- editor panel (nama, umur, dll) ---------- */
+      var overlay = $('#overlay'), lastFocus = null;
+      function fillFields() {
+        $('#fNama').value = S.nama; $('#fDari').value = S.dari; $('#fUmur').value = S.umur;
+        $('#fSurat').value = S.surat; $('#fAlasan').value = S.alasan.join('\n');
+        $('#fKejutan').value = S.kejutan;
+      }
+      function readFields() {
+        var lines = function (v) { return v.split('\n').map(function (x) { return x.trim(); }).filter(Boolean); };
+        var o = {
+          nama: $('#fNama').value.trim(), dari: $('#fDari').value.trim(),
+          umur: $('#fUmur').value.replace(/\D/g, '').slice(0, 3),
+          surat: $('#fSurat').value.trim(), kejutan: $('#fKejutan').value.trim(),
+          alasan: lines($('#fAlasan').value)
+        };
+        S.umur = o.umur;
+        merge(o);
+      }
+      function closePanel() { overlay.hidden = true; if (lastFocus) lastFocus.focus(); }
+      function apply() {
+        readFields();
+        try {
+          localStorage.setItem(SURAT_STORAGE_KEY, S.surat);
+          localStorage.setItem(KEJUTAN_STORAGE_KEY, S.kejutan);
+        } catch (e) { }
+        render();
+      }
+
+      /* Tautan bagikan lama (#data) → sembunyikan tombol edit */
+      if (hasData) {
+        [editSuratBtn, editSuratInnerBtn, editKejutanBtn, scratchEditBtn].forEach(function (b) { if (b) b.hidden = true; });
+      }
+
+      $('#closeBtn').addEventListener('click', closePanel);
+      overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) closePanel(); });
+      addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) closePanel(); });
+      $('#applyBtn').addEventListener('click', function () { apply(); toast('Sudah diterapkan ✅'); closePanel(); });
+      $('#resetBtn').addEventListener('click', function () {
+        try { localStorage.removeItem(SURAT_STORAGE_KEY); localStorage.removeItem(KEJUTAN_STORAGE_KEY); } catch (e) { }
+        S = JSON.parse(JSON.stringify(DEF)); fillFields(); render();
+        try { history.replaceState(null, '', location.href.split('#')[0]); } catch (e) { }
+        toast('Dikembalikan ke isi awal 🔄');
+      });
+      $('#shareBtn').addEventListener('click', function () {
+        apply();
+        var url = location.href.split('#')[0] + '#' + enc(S);
+        try { history.replaceState(null, '', url); } catch (e) { }
+        var inp = $('#shareUrl'); inp.value = url; $('#shareBox').hidden = false;
+        var done = function () { toast('Tautan tersalin. Tinggal kirim ke dia! 💌'); };
+        var fail = function () { inp.focus(); inp.select(); toast('Salin manual dari kolom tautan 📋'); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, fail);
+        else fail();
+      });
+      $('#shareUrl').addEventListener('focus', function () { this.select(); });
+
+      /* =========================================
+         UNDUH VERSI FINAL: kemas semua hasil edit ke dalam index.html
+         ========================================= */
+      var exportBtn = $('#exportBtn');
+      if (exportBtn) exportBtn.addEventListener('click', function () {
+        var clone = document.documentElement.cloneNode(true);
+        var one = function (sel) { return clone.querySelector(sel); };
+        var each = function (sel, fn) { clone.querySelectorAll(sel).forEach(fn); };
+        var setAttr = function (sel, a, v) { var n = one(sel); if (n) n.setAttribute(a, v); };
+        var el;
+
+        // buang hasil render dinamis supaya tidak dobel saat dimuat ulang
+        each('.sparkle, iframe, script[src*="youtube"], script[src*="ytimg"]', function (n) { n.remove(); });
+        if ((el = one('#floaters'))) el.innerHTML = '';
+        if ((el = one('#polaroidGrid'))) el.innerHTML = '';
+        if ((el = one('#polaroidLightboxCard'))) el.innerHTML = '';
+        if ((el = one('#ytPlayerWrap'))) el.innerHTML = '<div id="ytPlayer"></div>';
+        if ((el = one('body'))) el.removeAttribute('class');
+        each('.reveal, .visible', function (n) { n.classList.remove('reveal', 'visible'); });
+
+        // kembalikan status UI ke awal
+        setAttr('#cake', 'class', 'cake');
+        setAttr('#letterWrap', 'class', 'letter-wrap');
+        setAttr('#envBtn', 'aria-expanded', 'false');
+        if ((el = one('#envCap'))) el.textContent = 'Ketuk amplopnya ✉️';
+        if ((el = one('#scratchCv'))) { el.removeAttribute('class'); el.removeAttribute('width'); el.removeAttribute('height'); }
+        setAttr('#toast', 'class', 'toast');
+        if ((el = one('#toast'))) el.textContent = '';
+        setAttr('#musicBtn', 'class', 'music-btn btn');
+        setAttr('#musicLabel', 'class', 'music-label');
+        ['#overlay', '#polaroidLightbox', '#polaroidEditModal', '#suratEditModal', '#kejutanEditModal']
+          .forEach(function (s) { setAttr(s, 'hidden', ''); });
+
+        // sisipkan data hasil editanmu
+        var json = JSON.stringify({ state: S, polaroids: polaroids }).replace(/</g, '\\u003c');
+        if ((el = one('#saved-data'))) el.textContent = json;
+
+        var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
+        a.download = 'index.html';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+        toast('File final terunduh! Upload index.html ke domain 🚀');
+      });
+
+      render();
+      initScratch();
+
+      /* ---------- music: Off My Face by Justin Bieber (YouTube) ---------- */
+      var ytPlayer = null, musicPlaying = false, musicStarted = false, ytReady = false;
+      var ytScript = document.createElement('script');
+      ytScript.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(ytScript);
+
+      function setPlayingUI(playing) {
+        musicPlaying = playing;
+        var btn = $('#musicBtn'), label = $('#musicLabel');
+        if (playing) {
+          btn.classList.add('playing');
+          label.textContent = '🎶 Off My Face — Justin Bieber';
+          label.classList.add('show');
+          setTimeout(function () { label.classList.remove('show'); }, 3500);
+        } else {
+          btn.classList.remove('playing');
+        }
+      }
+
+      window.onYouTubeIframeAPIReady = function () {
+        ytPlayer = new YT.Player('ytPlayer', {
+          videoId: 'AeZxDcjXbzE',
+          playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, iv_load_policy: 3, modestbranding: 1, rel: 0, loop: 1, playlist: 'AeZxDcjXbzE' },
+          events: {
+            onReady: function () {
+              ytReady = true;
+              ytPlayer.setVolume(60);
+              ytPlayer.playVideo();
+              musicStarted = true;
+              setPlayingUI(true);
+            },
+            onStateChange: function (e) {
+              if (e.data === YT.PlayerState.PLAYING && !musicPlaying) setPlayingUI(true);
+              if (e.data === YT.PlayerState.ENDED) { ytPlayer.seekTo(0); ytPlayer.playVideo(); }
+            }
+          }
+        });
+      };
+
+      function toggleMusic() {
+        if (!ytReady) return;
+        musicPlaying = !musicPlaying;
+        var btn = $('#musicBtn'), label = $('#musicLabel');
+        if (musicPlaying) {
+          btn.classList.add('playing');
+          ytPlayer.playVideo();
+          label.textContent = '🎶 Off My Face — Justin Bieber';
+          label.classList.add('show');
+          setTimeout(function () { label.classList.remove('show'); }, 3500);
+        } else {
+          btn.classList.remove('playing');
+          ytPlayer.pauseVideo();
+          label.textContent = '⏸️ Dijeda';
+          label.classList.add('show');
+          setTimeout(function () { label.classList.remove('show'); }, 2000);
+        }
+      }
+
+      $('#musicBtn').addEventListener('click', function (e) { e.stopPropagation(); toggleMusic(); });
+
+      // Fallback: jika autoplay diblokir browser, mulai saat interaksi pertama
+      function autoStartMusic() {
+        if (musicStarted) return;
+        musicStarted = true;
+        var tryPlay = function () {
+          if (ytReady && !musicPlaying) toggleMusic();
+          else if (!ytReady) setTimeout(tryPlay, 500);
+        };
+        tryPlay();
+        document.removeEventListener('click', autoStartMusic);
+        document.removeEventListener('touchstart', autoStartMusic);
+      }
+      document.addEventListener('click', autoStartMusic);
+      document.addEventListener('touchstart', autoStartMusic);
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () { if (!sState.dirty && !sState.done) initScratch(); });
+      }
+    })();
+  </script>
+</body>
+
+</html>
