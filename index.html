@@ -2112,10 +2112,16 @@
   </button>
   <span class="music-label" id="musicLabel">🎶 Off My Face</span>
 
-  <!-- YouTube Player (hidden) -->
+  <!-- YouTube Player (background audio) -->
   <div id="ytPlayerWrap"
-    style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none;opacity:0">
-    <div id="ytPlayer"></div>
+    style="position:fixed;bottom:0;right:0;width:200px;height:200px;opacity:0.001;pointer-events:none;z-index:-1;overflow:hidden">
+    <iframe id="ytPlayer"
+      src="https://www.youtube.com/embed/AeZxDcjXbzE?enablejsapi=1&autoplay=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&rel=0&loop=1&playlist=AeZxDcjXbzE&playsinline=1"
+      allow="autoplay; encrypted-media"
+      style="width:100%;height:100%;border:0"
+      tabindex="-1"
+      title="Musik Ulang Tahun">
+    </iframe>
   </div>
 
   <!-- DATA HASIL EDIT (diisi otomatis oleh tombol "Unduh Versi Final") -->
@@ -2207,7 +2213,7 @@
         dari: 'Aku',
         umur: '',
         kejutan: 'Hadiah terakhir satu pelukan hangat dari {dari}, candaa. Tp klo beneran mau gapapa kok nnti aku kasih pas kita ketemuu hehe 🥺💖',
-        surat: 'Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah atau hal yang pengen kamu ceritain, jangan pernah ragu untuk cerita ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere\'s a little piece of my love for you',
+        surat: 'Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere\'s a little piece of my love for you',
         alasan: []
       };
       var S = JSON.parse(JSON.stringify(DEF));
@@ -2686,9 +2692,13 @@
         if (!v) {
           var r = cake.getBoundingClientRect();
           burst(r.left + r.width / 2, r.top + r.height / 3, 90);
+          playMusic();
         }
       }
-      cake.addEventListener('click', function () { setLit(!lit); });
+      cake.addEventListener('click', function () {
+        setLit(!lit);
+        if (!lit) playMusic();
+      });
 
       /* ---------- letter ---------- */
       var env = $('#envBtn');
@@ -3004,7 +3014,7 @@
         if ((el = one('#floaters'))) el.innerHTML = '';
         if ((el = one('#polaroidGrid'))) el.innerHTML = '';
         if ((el = one('#polaroidLightboxCard'))) el.innerHTML = '';
-        if ((el = one('#ytPlayerWrap'))) el.innerHTML = '<div id="ytPlayer"></div>';
+        if ((el = one('#ytPlayerWrap'))) el.innerHTML = '<iframe id="ytPlayer" src="https://www.youtube.com/embed/AeZxDcjXbzE?enablejsapi=1&autoplay=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&rel=0&loop=1&playlist=AeZxDcjXbzE&playsinline=1" allow="autoplay; encrypted-media" style="width:100%;height:100%;border:0" tabindex="-1" title="Musik Ulang Tahun"></iframe>';
         if ((el = one('body'))) el.removeAttribute('class');
         each('.reveal, .visible', function (n) { n.classList.remove('reveal', 'visible'); });
 
@@ -3038,7 +3048,7 @@
       initScratch();
 
       /* ---------- music: Off My Face by Justin Bieber (YouTube) ---------- */
-      var ytPlayer = null, musicPlaying = false, musicStarted = false, ytReady = false;
+      var ytPlayer = null, musicPlaying = false, ytReady = false, pendingMusic = false;
       var ytScript = document.createElement('script');
       ytScript.src = 'https://www.youtube.com/iframe_api';
       document.head.appendChild(ytScript);
@@ -3046,71 +3056,84 @@
       function setPlayingUI(playing) {
         musicPlaying = playing;
         var btn = $('#musicBtn'), label = $('#musicLabel');
+        if (!btn) return;
         if (playing) {
           btn.classList.add('playing');
-          label.textContent = '🎶 Off My Face — Justin Bieber';
-          label.classList.add('show');
-          setTimeout(function () { label.classList.remove('show'); }, 3500);
+          if (label) {
+            label.textContent = '🎶 Off My Face — Justin Bieber';
+            label.classList.add('show');
+            setTimeout(function () { label.classList.remove('show'); }, 3500);
+          }
         } else {
           btn.classList.remove('playing');
+          if (label) {
+            label.textContent = '⏸️ Dijeda';
+            label.classList.add('show');
+            setTimeout(function () { label.classList.remove('show'); }, 2000);
+          }
+        }
+      }
+
+      function playMusic() {
+        pendingMusic = true;
+        if (!ytPlayer || !ytReady) return;
+        try {
+          if (typeof ytPlayer.unMute === 'function') ytPlayer.unMute();
+          if (typeof ytPlayer.setVolume === 'function') ytPlayer.setVolume(75);
+          if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo();
+          setPlayingUI(true);
+        } catch (e) {}
+      }
+
+      function pauseMusic() {
+        pendingMusic = false;
+        if (!ytPlayer || !ytReady) return;
+        try {
+          if (typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
+        } catch (e) {}
+        setPlayingUI(false);
+      }
+
+      function toggleMusic() {
+        if (musicPlaying) {
+          pauseMusic();
+        } else {
+          playMusic();
         }
       }
 
       window.onYouTubeIframeAPIReady = function () {
         ytPlayer = new YT.Player('ytPlayer', {
-          videoId: 'AeZxDcjXbzE',
-          playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, iv_load_policy: 3, modestbranding: 1, rel: 0, loop: 1, playlist: 'AeZxDcjXbzE' },
           events: {
             onReady: function () {
               ytReady = true;
-              ytPlayer.setVolume(60);
-              ytPlayer.playVideo();
-              musicStarted = true;
-              setPlayingUI(true);
+              if (pendingMusic) {
+                playMusic();
+              }
             },
             onStateChange: function (e) {
-              if (e.data === YT.PlayerState.PLAYING && !musicPlaying) setPlayingUI(true);
-              if (e.data === YT.PlayerState.ENDED) { ytPlayer.seekTo(0); ytPlayer.playVideo(); }
+              if (e.data === YT.PlayerState.PLAYING) {
+                setPlayingUI(true);
+              } else if (e.data === YT.PlayerState.PAUSED) {
+                setPlayingUI(false);
+              } else if (e.data === YT.PlayerState.ENDED) {
+                if (ytPlayer && ytPlayer.seekTo) {
+                  ytPlayer.seekTo(0);
+                  ytPlayer.playVideo();
+                }
+              }
             }
           }
         });
       };
 
-      function toggleMusic() {
-        if (!ytReady) return;
-        musicPlaying = !musicPlaying;
-        var btn = $('#musicBtn'), label = $('#musicLabel');
-        if (musicPlaying) {
-          btn.classList.add('playing');
-          ytPlayer.playVideo();
-          label.textContent = '🎶 Off My Face — Justin Bieber';
-          label.classList.add('show');
-          setTimeout(function () { label.classList.remove('show'); }, 3500);
-        } else {
-          btn.classList.remove('playing');
-          ytPlayer.pauseVideo();
-          label.textContent = '⏸️ Dijeda';
-          label.classList.add('show');
-          setTimeout(function () { label.classList.remove('show'); }, 2000);
-        }
+      var musicButton = $('#musicBtn');
+      if (musicButton) {
+        musicButton.addEventListener('click', function (e) {
+          e.stopPropagation();
+          toggleMusic();
+        });
       }
-
-      $('#musicBtn').addEventListener('click', function (e) { e.stopPropagation(); toggleMusic(); });
-
-      // Fallback: jika autoplay diblokir browser, mulai saat interaksi pertama
-      function autoStartMusic() {
-        if (musicStarted) return;
-        musicStarted = true;
-        var tryPlay = function () {
-          if (ytReady && !musicPlaying) toggleMusic();
-          else if (!ytReady) setTimeout(tryPlay, 500);
-        };
-        tryPlay();
-        document.removeEventListener('click', autoStartMusic);
-        document.removeEventListener('touchstart', autoStartMusic);
-      }
-      document.addEventListener('click', autoStartMusic);
-      document.addEventListener('touchstart', autoStartMusic);
 
       if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(function () { if (!sState.dirty && !sState.done) initScratch(); });
