@@ -1886,8 +1886,18 @@
     <section id="polaroid" class="polaroid-section" aria-labelledby="hPolaroid">
       <div class="polaroid-header">
         <h2 id="hPolaroid">Kenangan Manis Kita 📸</h2>
-        <p class="lead">Setiap momen indah punya cerita. Ketuk fotonya untuk baca
+        <p class="lead">Setiap detik bersamamu selalu jadi cerita terindah. Ketuk fotonya untuk membalik &amp; baca
           pesan rahasianya! <em class="emoji-accent">✨</em></p>
+        <div class="polaroid-toolbar">
+          <label class="btn mint" title="Ganti foto dengan foto pilihanmu">
+            📷 Ganti Foto Sendiri
+            <input type="file" id="polaroidBatchInput" accept="image/*" multiple hidden>
+          </label>
+          <button type="button" class="btn plain" id="polaroidResetBtn" title="Kembalikan ke foto bawaan">🔄 Reset Foto
+            Bawaan</button>
+          <button type="button" class="btn pink" id="exportBtn" title="Unduh file HTML final untuk diupload">💾 Unduh
+            Versi Final</button>
+        </div>
       </div>
       <div class="polaroid-grid" id="polaroidGrid"></div>
     </section>
@@ -2107,10 +2117,7 @@
     style="position:fixed;bottom:0;right:0;width:200px;height:200px;opacity:0.001;pointer-events:none;z-index:-1;overflow:hidden">
     <iframe id="ytPlayer"
       src="https://www.youtube.com/embed/AeZxDcjXbzE?enablejsapi=1&autoplay=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&rel=0&loop=1&playlist=AeZxDcjXbzE&playsinline=1"
-      allow="autoplay; encrypted-media"
-      style="width:100%;height:100%;border:0"
-      tabindex="-1"
-      title="Musik Ulang Tahun">
+      allow="autoplay; encrypted-media" style="width:100%;height:100%;border:0" tabindex="-1" title="Musik Ulang Tahun">
     </iframe>
   </div>
 
@@ -2121,14 +2128,14 @@
     "dari": "Aku",
     "umur": "",
     "kejutan": "Hadiah terakhir satu pelukan hangat dari {dari}, candaa. Tp klo beneran mau gapapa kok nnti aku kasih pas kita ketemuu hehe 🥺💖",
-    "surat": "Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere's a little piece of my love for you",
+    "surat": "Happy birthday my lovely girl 😘,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. Semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. Hidup lebih lama ya sayangg supaya kita bisa bersama2 dalam jangka waktu yang lama sampe menua. \n\nJangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs, karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu, ngerasa sendirian dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita, keluh kesah kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini, kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi ada satu hal yang harus kamu percaya yaitu rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere's a little piece of my love for you",
     "alasan": []
   },
   "polaroids": [
     {
       "id": 1,
       "title": "Pertama Kali Req panggil Sayang 💌",
-      "date": "15 Mei",
+      "date": "5 Mei",
       "desc": "Bikin Jantung jedag jedug pas baca",
       "note": "Pas baca bikin kena stun, trs bingung mau respon apa. karena salting juga akhirnya dipanggil samyang 🥺",
       "tape": "pink",
@@ -2203,7 +2210,7 @@
         dari: 'Aku',
         umur: '',
         kejutan: 'Hadiah terakhir satu pelukan hangat dari {dari}, candaa. Tp klo beneran mau gapapa kok nnti aku kasih pas kita ketemuu hehe 🥺💖',
-        surat: 'Happy birthday my lovely girl,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa menua dalam jangka waktu yang lama. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini mungkin kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere\'s a little piece of my love for you',
+        surat: 'Happy birthday my lovely girl 😘,\n\nSemoga diumur yang sekarang ini kamu diberi Kesehatan yang prima lahir dan batin, makin peduli lagi sama diri kamu sendiri, makin sukses karir kamu kedepannya, dan sayang aku terus selama lamanya. semoga kamu tidak mengecewakan kepercayaan aku yang udh aku kasih ke kamu yaa sayanggg. hidup lebih lama ya sayangg supaya kita bisa bersama2 dalam jangka waktu yang lama sampe menua. jangan pernah bosen untuk sayang sama aku dan jangan ilang2an trs karena aku kangen kamu setiap saat, setiap detik, setiap menit, setiap hari, kalo ada masalah dan hal yang pengen kamu ceritain atau pengen kamu tanyain ke aku, jangan pernah ragu, ngerasa sendirian dan sungkan untuk cerita atau komunikasiin ke aku yaa sayanggg. Aku disini selalu ada buat kamu. Aku siap mendengarkan cerita, keluh kesah kamu 24/7 klo kamu mau dan mungkin aku bisa ngasih sedikit solusi ke kamu. Maaf ya kalo selama ini, kamu belum dapet rasa sayang yang kamu mau dari aku. Aku trs belajar untuk memberikan rasa sayang yg kamu mau. tapi percayalah rasa sayang aku ke kamu bener2 tulus dari hati kecil aku yg paling dalem.\n\nWalaupun aku orangnya pelupaan banget, tp aku gabakal lupa kok hari ulang tahun orang yang paling aku sayanggg. Even when times changes the person i become, i hope it never changes the part of me that chose you.\n\nhere\'s a little piece of my love for you',
         alasan: []
       };
       var S = JSON.parse(JSON.stringify(DEF));
@@ -2677,8 +2684,8 @@
         lit = v;
         cake.classList.toggle('out', !v);
         $('#blowStatus').textContent = v
-          ? 'Buat permohonan dulu, trs tiup lilinnya yaa. 🙏✨'
-          : 'Yeay! Semoga permohonan kamu dikabulkan ya sayang, aamiin. 🥳🎉';
+          ? 'Buat permohonan dulu, lalu tiup lilinnya. 🙏✨'
+          : 'Yeay! Semoga permohonanmu dikabulkan semesta. 🥳🎉';
         if (!v) {
           var r = cake.getBoundingClientRect();
           burst(r.left + r.width / 2, r.top + r.height / 3, 90);
@@ -3072,7 +3079,7 @@
           if (typeof ytPlayer.setVolume === 'function') ytPlayer.setVolume(75);
           if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo();
           setPlayingUI(true);
-        } catch (e) {}
+        } catch (e) { }
       }
 
       function pauseMusic() {
@@ -3080,7 +3087,7 @@
         if (!ytPlayer || !ytReady) return;
         try {
           if (typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
-        } catch (e) {}
+        } catch (e) { }
         setPlayingUI(false);
       }
 
